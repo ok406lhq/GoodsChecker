@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wolf.zero.greenroad.activity.PreviewDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_preview_detail"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/custom_attr_app_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_margin0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/preview_activity_text_header_style"
+                            android:text="采集信息" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="车道" />
+
+                                <TextView
+                                    android:id="@+id/pick_001"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="班次" />
+
+                                <TextView
+                                    android:id="@+id/pick_shift"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_site_check_preview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="现场登记人" />
+
+                                <TextView
+
+                                    android:id="@+id/pick_003"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+                            </LinearLayout>
+
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="车牌号" />
+
+                                <TextView
+                                    android:id="@+id/pick_004"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="车型" />
+
+                                <TextView
+                                    android:id="@+id/pick_005"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/device_item_bg_1dp" />
+
+                            <!--<LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="车牌颜色"/>
+
+                                <TextView
+                                    android:id="@+id/pick_005"
+                                    style="@style/content_activity_preview_all_detail_style"/>
+
+
+                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/title_activity_preview_all_detail_style"
+                                    android:text="货物" />
+
+                                <TextView
+
+                                    android:id="@+id/pick_006"
+                                    style="@style/content_activity_preview_all_detail_style" />
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:layout_marginBottom="@dimen/layout_margin5dp"
+                                android:layout_marginTop="@dimen/layout_margin5dp">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/detail_activity_recycler_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="@dimen/layout_margin10dp" />
+
+                                <ProgressBar
+                                    android:id="@+id/detail_activity_recycler_progress"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/preview_activity_text_header_style"
+                            android:text="收费信息" />
+
+                        <!-- <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="55dp"
+                             android:layout_marginTop="@dimen/layout_margin5dp"
+                             android:gravity="center"
+                             android:orientation="horizontal">
+
+
+                             <TextView
+                                 android:layout_width="90dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_gravity="center_vertical"
+                                 android:layout_marginLeft="@dimen/layout_margin10dp"
+                                 android:gravity="center_vertical"
+                                 android:text="出口流水号:"
+                                 android:textColor="?attr/custom_text_color_second"
+                                 android:textSize="15sp"/>
+
+                             <TextView
+                                 android:id="@+id/export_number"
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:gravity="center_vertical"
+                                 android:textColor="?attr/custom_text_color_first"
+                                 android:textSize="15sp"/>
+
+                         </LinearLayout>
+
+                         <include layout="@layout/device_item_bg_1dp"/>-->
+
+                        <!--<LinearLayout
+                            style="@style/ll_scan_item_style">
+
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="出口车牌:"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_1"
+                                style="@style/scan_code_change_info_style"/>
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="荷载质量(吨):"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_2"
+                                style="@style/scan_code_change_info_style"/>
+                        </LinearLayout>-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="是否超限:" />
+
+                            <TextView
+                                android:id="@+id/text_table_limit"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="出口车牌:" />
+
+                            <TextView
+                                android:id="@+id/text_table_1"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="称重质量(吨):" />
+
+                            <TextView
+                                android:id="@+id/text_table_4"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="货物种类:" />
+
+                            <TextView
+                                android:id="@+id/text_table_5"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="免费金额(元):" />
+
+                            <TextView
+                                android:id="@+id/text_table_6"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="出口站:" />
+
+                            <TextView
+                                android:id="@+id/text_table_10"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="出口车道:" />
+
+                            <TextView
+                                android:id="@+id/text_table_12"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+
+                        </LinearLayout>
+
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <!--<LinearLayout
+                            style="@style/ll_scan_item_style">
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="整备质量(吨):"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_3"
+                                style="@style/scan_code_change_info_style"/>
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="称重质量(吨):"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_4"
+                                style="@style/scan_code_change_info_style"/>
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp"/>-->
+                        <!--
+                                            <LinearLayout
+                                                style="@style/ll_scan_item_style">
+
+                                                <TextView
+                                                    style="@style/scan_code_info_style"
+                                                    android:text="收费金额(元):"/>
+                                                />
+
+                                                <TextView
+                                                    android:id="@+id/text_table_5"
+                                                    android:inputType="number"
+                                                    style="@style/scan_code_change_info_style"/>
+
+                                                <TextView
+                                                    style="@style/scan_code_info_style"
+                                                    android:text="免费金额(元):"/>
+                                                />
+
+                                                <TextView
+                                                    android:id="@+id/text_table_6"
+                                                    style="@style/scan_code_change_info_style"/>
+                                            </LinearLayout>
+
+                                            <include layout="@layout/device_item_bg_1dp"/>-->
+
+                        <!--<LinearLayout
+                            style="@style/ll_scan_item_style">
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="入口路段:"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_7"
+                                style="@style/scan_code_change_info_style"/>
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="出口路段:"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_8"
+                                style="@style/scan_code_change_info_style"/>
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp"/>-->
+
+                        <!--<LinearLayout
+                            style="@style/ll_scan_item_style">
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="入口站:"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_9"
+                                style="@style/scan_code_change_info_style"/>
+
+                            <TextView
+                                style="@style/scan_code_info_style"
+                                android:text="出口站:"/>
+                            />
+
+                            <TextView
+                                android:id="@+id/text_table_10"
+                                style="@style/scan_code_change_info_style"/>
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp"/>-->
+
+                        <!--  <LinearLayout
+                              style="@style/ll_scan_item_style">
+
+                              <TextView
+                                  style="@style/scan_code_info_style"
+                                  android:text="入口车道:"/>
+                              />
+
+                              <TextView
+                                  android:id="@+id/text_table_11"
+                                  style="@style/scan_code_change_info_style"/>
+
+                              <TextView
+                                  style="@style/scan_code_info_style"
+                                  android:text="出口车道:"/>
+                              />
+
+                              <TextView
+                                  android:id="@+id/text_table_12"
+                                  style="@style/scan_code_change_info_style"/>
+                          </LinearLayout>
+
+      -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/preview_activity_text_header_style"
+                            android:text="检查结论" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="容量超过80%" />
+
+                            <TextView
+                                android:id="@+id/check_001"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/title_activity_preview_all_detail_style"
+                                android:text="是否免费" />
+
+                            <TextView
+
+                                android:id="@+id/check_002"
+                                style="@style/content_activity_preview_all_detail_style" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="现场检查结论"
+                                android:textColor="?attr/custom_text_color_second"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/checked_conclusion_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/layout_margin5dp"
+                                android:background="?attr/text_box_bg"
+                                android:gravity="top|left"
+                                android:maxLines="3"
+                                android:paddingLeft="@dimen/layout_margin5dp"
+                                android:paddingRight="@dimen/layout_margin5dp"
+                                android:textColor="?attr/custom_text_color_first"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/device_item_bg_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="现场检查说明"
+                                android:textColor="?attr/custom_text_color_second"
+                                android:textSize="@dimen/text16" />
+
+                            <TextView
+                                android:id="@+id/checked_description_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/layout_margin5dp"
+                                android:background="?attr/text_box_bg"
+                                android:gravity="top|left"
+                                android:paddingLeft="@dimen/layout_margin5dp"
+                                android:paddingRight="@dimen/layout_margin5dp"
+                                android:textColor="?attr/custom_text_color_first"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/draft_save_edit"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/toolbar_color_day"
+                    android:gravity="center"
+                    android:text="编 辑"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text20"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/draft_save_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_margin="@dimen/layout_margin10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="2017-08-22 12:00"
+                    android:textColor="?attr/custom_text_color_first"
+                    android:textSize="@dimen/text16"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/submit_save_edit"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/toolbar_color_day"
+                    android:drawableLeft="@drawable/edit"
+                    android:drawableStart="@drawable/edit"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="修 改"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text20"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/submit_save_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_margin="@dimen/layout_margin10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="(注:不建议审核通过后修改)"
+                    android:textColor="?attr/custom_text_color_first"
+                    android:textSize="@dimen/text16"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

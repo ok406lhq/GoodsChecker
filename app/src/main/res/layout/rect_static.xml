@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iv_static"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/shape_static_night"
+    android:layout_width="10dp"
+    android:layout_height="60dp"/>

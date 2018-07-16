@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="station_name">
+        <item>上海收费站</item>
+        <item>深圳收费站</item>
+        <item>北京收费站</item>
+        <item>广州收费站</item>
+        <item>大安庆收费站</item>
+        <item>西北收费站</item>
+    </array>
+</resources>

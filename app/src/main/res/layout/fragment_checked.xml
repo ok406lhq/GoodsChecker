@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/layout_margin5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="容积合格(大于80%)"
+                    android:textColor="?attr/custom_text_color_second"
+                    android:textSize="18sp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggle_is_room"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector_day"
+                    android:paddingBottom="@dimen/layout_margin10dp"
+                    android:paddingTop="@dimen/layout_margin10dp"
+                    android:textOff="@null"
+                    android:textOn="@null"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/device_item_bg_1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/layout_margin5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/layout_margin10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="是否免费"
+                    android:textColor="?attr/custom_text_color_second"
+                    android:textSize="18sp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggle_is_free"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/toggle_selector_day"
+                    android:paddingBottom="@dimen/layout_margin10dp"
+                    android:paddingTop="@dimen/layout_margin10dp"
+                    android:textOff="@null"
+                    android:textOn="@null"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/device_item_bg_1dp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginRight="@dimen/layout_margin10dp"
+                android:id="@+id/recycle_site_check_operator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <include layout="@layout/device_item_bg_1dp"/>
+
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/layout_margin10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_margin10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="现场登记人"
+                    android:textColor="?attr/custom_text_color_second"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/site_login_operator"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/layout_margin10dp"
+                    android:gravity="center|right"
+                    android:textColor="?attr/custom_text_color_first"
+                    android:textSize="18sp"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/device_item_bg_1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_margin10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="现场检查结论"
+                    android:textColor="?attr/custom_text_color_second"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/checked_conclusion_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/layout_margin5dp"
+                    android:background="?attr/text_box_bg"
+                    android:gravity="top|left"
+                    android:maxLines="3"
+                    android:paddingLeft="@dimen/layout_margin5dp"
+                    android:paddingRight="@dimen/layout_margin5dp"
+                    android:textColor="?attr/custom_text_color_first"
+                    android:textSize="@dimen/text18"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/device_item_bg_1dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_margin10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="现场检查说明"
+            android:textColor="?attr/custom_text_color_second"
+            android:textSize="@dimen/text18"/>
+
+        <EditText
+            android:id="@+id/checked_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/layout_margin5dp"
+            android:background="?attr/text_box_bg"
+            android:gravity="top|left"
+            android:paddingLeft="@dimen/layout_margin5dp"
+            android:paddingRight="@dimen/layout_margin5dp"
+            android:textColor="?attr/custom_text_color_first"
+            android:textSize="@dimen/text18"/>
+
+    </LinearLayout>
+</LinearLayout>

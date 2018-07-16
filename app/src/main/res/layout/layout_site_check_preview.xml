@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_preview_detail">
+
+    <TextView
+        android:id="@+id/pick_002_header"
+        style="@style/title_activity_preview_all_detail_style"
+        android:text="现场检查人"/>
+
+    <TextView
+
+        android:id="@+id/pick_002_operator"
+        style="@style/content_activity_preview_all_detail_style"/>
+
+</LinearLayout>

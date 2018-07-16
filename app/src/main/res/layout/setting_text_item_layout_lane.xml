@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="55dp"
+    android:background="?attr/custom_setting_item_change_bg"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/layout_margin10dp"
+    tools:showIn="@layout/activity_setting">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/layout_margin20dp"
+        android:layout_height="match_parent"
+        android:text="@string/setting_current_shift"
+        android:layout_gravity="left"
+        android:gravity="center_vertical"
+        android:textColor="?attr/custom_text_color_second"
+        android:maxLines="1"
+        android:focusable="true"
+        android:textSize="@dimen/text18"/>
+
+<!--
+    <TextView
+        style="@style/register_activity_tv_title_style"
+        android:text="注册收费站"/>
+-->
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:background="@null"
+            android:inputType="number"
+            android:id="@+id/text_setting_shift"
+            android:textColor="?attr/custom_attr_setting_text_color"
+            android:textSize="@dimen/text18"
+            android:text="早班"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="1"/>
+
+        <ImageButton
+            android:id="@+id/btn_setting_shift"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/layout_margin10dp"
+            android:background="@drawable/pop_drop_down"/>
+    </FrameLayout>
+
+</LinearLayout>

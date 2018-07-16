@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="green" />
+
+
+    <!--<version value="8" />-->
+    <version value="2" />
+
+    <list>
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLoginInfo" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportOperator" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportDraftOrSubmit" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportMedia" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportScan" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportDetail" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportChecked" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportBlack" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLine" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.TeamItem" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportGoods" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportCarTypeAndConfig" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLocalGoods" />
+
+    </list>
+    <!--<mapping class="com.android.htc.greenroad.litepalbean.SupportLane" />-->
+
+</litepal>

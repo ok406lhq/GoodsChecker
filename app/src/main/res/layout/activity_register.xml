@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_margin10dp"
+    >
+
+
+
+    <!--注册路段-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/layout_margin50dp"
+        style="@style/register_activity_ll_style">
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="注册路段"/>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <TextView
+                android:id="@+id/text_road_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:maxLines="1"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/text18"/>
+
+            <ImageButton
+                android:id="@+id/register_road"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/layout_margin10dp"
+                android:background="@drawable/pop_drop_down"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <!--注册收费站-->
+
+    <LinearLayout
+        style="@style/register_activity_ll_style">
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="注册收费站"/>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <TextView
+                android:id="@+id/text_station_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:maxLines="1"
+                android:textColor="@color/color333333"
+                android:textSize="@dimen/text18"/>
+
+            <ImageButton
+                android:id="@+id/register_station"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/layout_margin10dp"
+                android:background="@drawable/pop_drop_down"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <!--注册码-->
+    <LinearLayout
+
+        style="@style/register_activity_ll_style"
+        >
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="注册码"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <EditText
+                android:id="@+id/register_code"
+                style="@style/register_activity_edit_content_style"
+                android:hint="请输入20位数的注册码"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <!--注册用户-->
+    <LinearLayout
+        style="@style/register_activity_ll_style">
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="注册用户"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <EditText
+                android:id="@+id/register_user"
+                style="@style/register_activity_edit_content_style"
+                android:hint="请输入用户名"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <!--注册用户-->
+    <LinearLayout
+        style="@style/register_activity_ll_style">
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="注册密码"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <EditText
+                android:id="@+id/register_psw"
+                style="@style/register_activity_edit_content_style"
+                android:hint="请输入用户密码"
+                android:inputType="textPassword"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <!--注册用户-->
+    <LinearLayout
+        style="@style/register_activity_ll_style">
+
+        <TextView
+            style="@style/register_activity_tv_title_style"
+            android:text="确定密码"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <EditText
+                android:id="@+id/register_sure_psw"
+                style="@style/register_activity_edit_content_style"
+                android:hint="请再次输入密码"
+                android:inputType="textPassword"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <!--注册用户-->
+
+
+    <Button
+        android:id="@+id/btn_sure_register"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/register_bg_green"
+        android:elevation="@dimen/layout_margin5dp"
+        android:gravity="center"
+        android:text="申请注册"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
+
+
+</LinearLayout>

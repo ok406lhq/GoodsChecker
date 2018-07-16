@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/delete_preview_7"
+        android:icon="@drawable/delete_login_info"
+        android:title="清除七天前的记录"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_preview_15"
+        android:icon="@drawable/delete_login_info"
+        android:title="清除15天前的记录"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_preview_30"
+        android:icon="@drawable/delete_login_info"
+        android:title="清除30天前的记录"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_preview_all"
+        android:icon="@drawable/delete_login_info"
+        android:title="清除所有的记录"
+        app:showAsAction="never"/>
+
+
+</menu>

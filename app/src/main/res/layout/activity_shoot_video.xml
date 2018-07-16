@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/custom_attr_app_bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/layout_margin10dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_shoot_video"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_color_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/layout_margin5dp"
+        android:paddingRight="@dimen/layout_margin5dp"
+        android:paddingTop="@dimen/layout_margin20dp">
+
+
+        <RadioButton
+            android:id="@+id/license_black_video"
+            style="@style/RadioButtonStyle"
+            android:background="@drawable/rb_bg_selector_day"
+            android:text="黑牌"
+            android:textColor="@color/license_color_text_day"
+            />
+
+        <RadioButton
+            android:id="@+id/license_blue_video"
+            style="@style/RadioButtonStyle"
+            android:layout_marginLeft="@dimen/layout_margin2dp"
+            android:layout_marginRight="@dimen/layout_margin2dp"
+            android:background="@drawable/rb_bg_selector_day"
+            android:text="蓝牌"
+
+            android:textColor="@color/license_color_text_day"/>
+
+        <RadioButton
+            android:id="@+id/license_yellow_video"
+            style="@style/RadioButtonStyle"
+                android:background="@drawable/rb_bg_selector_day"
+            android:text="黄牌"
+            android:textColor="@color/license_color_text_day"
+            />
+
+
+        <RadioButton
+
+            android:id="@+id/license_green_video"
+            style="@style/RadioButtonStyle"
+            android:layout_marginLeft="@dimen/layout_margin2dp"
+            android:layout_marginRight="@dimen/layout_margin2dp"
+            android:background="@drawable/rb_bg_selector_day"
+            android:text="绿牌"
+            android:textColor="@color/license_color_text_day"/>
+
+        <RadioButton
+            android:id="@+id/license_white_video"
+            style="@style/RadioButtonStyle"
+            android:background="@drawable/rb_bg_selector_day"
+            android:text="白牌"
+            android:textColor="@color/license_color_text_day"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/activity_play"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.wolf.zero.greenroad.view.PlayView
+            android:id="@+id/playView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/shutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="录制"/>
+
+            <Button
+                android:id="@+id/playBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="播放"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_ok_send_video"
+        style="@style/style_button_sure"
+        android:text="@string/ok_send"
+        />
+
+</LinearLayout>

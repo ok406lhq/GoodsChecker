@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true" android:color="@color/licence_selected_text_day" />
+    <item android:state_checked="false" android:color="@color/licence_text_normal_day" />
+
+</selector>

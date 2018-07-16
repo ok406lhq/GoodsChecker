@@ -1,0 +1,101 @@
+{
+  "code": 200,
+  "data": {
+    "carTypeList":["大货车",
+      "小轿车"],
+
+    "subjects": [
+      {
+        "name": "大白菜",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "001"
+      },
+
+      {
+        "name": "菜薹",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "004"
+      },
+      {
+        "name": "油菜",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "002"
+      },
+      {
+        "name": "菜花",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "005"
+      },
+      {
+        "name": "芥蓝",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "006"
+      },
+      {
+        "name": "萝卜",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "007"
+      },
+      {
+        "name": "西蓝花",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "0010"
+      },
+      {
+        "name": "小青菜",
+        "imageUrl": "www.baidu.com",
+        "type": "01",
+        "sortId": "003"
+      }
+    ],
+    "shuiguo": [
+      {
+        "name": "西蓝花",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "008"
+      }, {
+        "name": "小青菜",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "005"
+      }, {
+        "name": "土豆",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "001"
+      }
+    ],
+    "roudannai": [
+      {
+        "name": "西蓝花",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "001"
+      }
+    ],
+    "shuichanp": [
+      {
+        "name": "西蓝花",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "001"
+      }
+    ],
+    "xuqin": [
+      {
+        "name": "西蓝花",
+        "imageUrl": "www.baidu.com",
+        "type": "02",
+        "sortId": "001"
+      }
+    ]
+  }
+}

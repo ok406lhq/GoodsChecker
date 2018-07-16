@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="checked_conclusion">
+        <item>符合绿通放行规定</item>
+
+        <item>三证证件有效期过期</item>
+        <item>假冒行驶证</item>
+        <item>假冒驾驶证</item>
+        <item>假冒运营证</item>
+
+        <item>目录外农产品</item>
+        <item>混装目录外农产品超过20%</item>
+        <item>混装非农产品</item>
+        <item>伪装农产品</item>
+
+        <item>超限</item>
+        <item>超载</item>
+
+        <item>重量不足80%</item>
+        <item>容积不足80%</item>
+
+        <item>假冒海关证明单据</item>
+        <item>假冒货物重量证明文件</item>
+        <item>假冒其他绿通有关证明文件</item>
+
+        <item>其他</item>
+    </array>
+</resources>

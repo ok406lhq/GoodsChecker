@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    tools:showIn="@layout/fragment_details">
+
+    <LinearLayout
+        style="@style/detail_fragment_text_ll_styles">
+
+        <TextView
+            style="@style/detail_fragment_text_text_styles"
+            android:drawableLeft="@drawable/image_weight"
+            android:text="称重"/>
+
+        <TextView
+            style="@style/detail_fragment_text_device_styles"/>
+
+        <EditText
+            android:id="@+id/detail_text_weight"
+            style="@style/detail_fragment_text_edit_styles"
+            android:digits="@string/alphabet_and_point"
+            android:hint="输入重量"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/detail_fragment_text_ll_styles">
+
+        <TextView
+            style="@style/detail_fragment_text_text_styles"
+            android:drawableLeft="@drawable/image_free"
+            android:text="免费"/>
+        <TextView
+            style="@style/detail_fragment_text_device_styles"/>
+
+        <EditText
+            android:id="@+id/detail_text_free"
+            style="@style/detail_fragment_text_edit_styles"
+            android:digits="@string/alphabet_and_point"
+            android:hint="输入价格"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/detail_fragment_text_ll_styles">
+
+        <TextView
+            style="@style/detail_fragment_text_text_styles"
+            android:drawableLeft="@drawable/image_car_type"
+            android:text="车型"/>
+
+        <TextView
+            style="@style/detail_fragment_text_device_styles"/>
+
+        <EditText
+            android:id="@+id/detail_text_car"
+            style="@style/detail_fragment_text_edit_styles"
+            android:focusable="false"
+            android:hint="车型"/>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/detail_fragment_text_ll_styles">
+
+        <TextView
+            style="@style/detail_fragment_text_text_styles"
+            android:drawableLeft="@drawable/image_export"
+            android:text="出口"/>
+
+        <TextView
+            style="@style/detail_fragment_text_device_styles"/>
+
+        <EditText
+            android:id="@+id/detail_text_export"
+            style="@style/detail_fragment_text_edit_styles"
+            android:focusable="false"
+            android:hint="选择出口"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

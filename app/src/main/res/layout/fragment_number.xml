@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/layout_margin20dp"
+        android:layout_marginTop="@dimen/layout_margin20dp"
+        android:layout_marginLeft="@dimen/layout_margin10dp"
+        android:layout_marginRight="@dimen/layout_margin10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/layout_margin60dp"
+            android:layout_height="@dimen/layout_margin60dp"
+            android:layout_marginLeft="@dimen/layout_margin10dp"
+            android:background="@drawable/image_car_goods"
+            android:scaleType="fitCenter"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/layout_margin10dp"
+            android:background="?attr/custom_shape_background_main_else"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/layout_margin0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/et_input_box_1"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"
+                    android:textSize="@dimen/text28"/>
+
+                <EditText
+                    android:id="@+id/et_input_box_2"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"
+                    android:textSize="@dimen/text28"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="?attr/custom_shape_static"
+                android:focusable="false"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/layout_margin0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <EditText
+                    android:id="@+id/et_input_box_3"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <EditText
+                    android:id="@+id/et_input_box_4"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <EditText
+                    android:id="@+id/et_input_box_5"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <EditText
+                    android:id="@+id/et_input_box_6"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <EditText
+                    android:id="@+id/et_input_box_7"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:text="识别"
+            android:id="@+id/btn_license_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_marginRight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#00f0eff4"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="?attr/number_fragment_key_bg"
+        android:keyTextColor="?attr/number_fragment_key_text"
+        android:keyTextSize="20sp"
+        android:labelTextSize="20sp"
+        android:layout_marginTop="5dp"
+        android:shadowColor="#e7e7e7"
+        android:shadowRadius="1"
+        />
+
+</LinearLayout>

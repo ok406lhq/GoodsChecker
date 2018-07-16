@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--端口-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/layout_margin10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_config_port"
+            style="@style/register_activity_ll_style"
+            android:layout_marginTop="80dp"
+            >
+
+            <TextView
+                style="@style/register_activity_tv_title_style"
+                android:text="配置端口"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <EditText
+                        android:id="@+id/text_line_config"
+                        style="@style/register_activity_edit_content_style"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"/>
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--注册用户-->
+
+
+        <Button
+            android:id="@+id/btn_sure_line"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/ll_config_port"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/register_bg_green"
+            android:elevation="@dimen/layout_margin5dp"
+            android:gravity="center"
+            android:text="申请注册"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress_port"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_config_port"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pb_config_port"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/layout_margin20dp"
+            android:text="正在努力加载信息,请稍后..."
+            android:textColor="@color/gray"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

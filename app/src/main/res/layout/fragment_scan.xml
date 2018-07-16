@@ -1,0 +1,287 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="55dp"
+         android:layout_marginTop="@dimen/layout_margin5dp"
+         android:gravity="center"
+         android:orientation="horizontal">
+
+
+         <TextView
+             android:layout_width="90dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="center_vertical"
+             android:layout_marginLeft="@dimen/layout_margin10dp"
+             android:gravity="center_vertical"
+             android:text="出口流水号:"
+             android:textColor="?attr/custom_text_color_second"
+             android:textSize="15sp"/>
+
+         <EditText
+             android:id="@+id/export_number"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:background="@null"
+             android:enabled="false"
+             android:gravity="center_vertical"
+             android:textColor="?attr/custom_text_color_first"
+             android:textSize="15sp"/>
+
+         <TextView
+             android:id="@+id/scan_qr_code"
+             android:layout_width="100dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             android:background="#c1fbf0"
+             android:gravity="center"
+             android:text="扫描二维码"
+             android:textColor="?attr/custom_text_color_second"
+             android:textSize="16sp"/>
+
+     </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/layout_margin5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/layout_margin10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="是否超限"
+            android:textColor="?attr/custom_text_color_second"
+            android:textSize="15sp"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_is_limit"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/toggle_selector_day"
+            android:paddingBottom="@dimen/layout_margin10dp"
+            android:paddingTop="@dimen/layout_margin10dp"
+            android:textOff="@null"
+            android:textOn="@null"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+    <LinearLayout
+        style="@style/ll_scan_item_style">
+
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+            <include layout="@layout/text_view_mark_tab"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:text="出口车牌:"/>
+
+            <TextView
+                android:id="@+id/text_table_1"
+                style="@style/scan_code_change_info_style"/>
+
+        </LinearLayout>
+
+
+        <!--<TextView
+            style="@style/scan_code_info_style"
+            android:text="荷载质量(吨):"/>
+
+        <EditText
+            android:id="@+id/text_table_2"
+            style="@style/scan_code_change_info_style"/>-->
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+            <include layout="@layout/text_view_mark_tab"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:text="称重质量\n    (吨):"/>
+
+
+            <TextView
+                android:id="@+id/text_table_4"
+                style="@style/scan_code_change_info_style"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+    <LinearLayout
+        style="@style/ll_scan_item_style">
+
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" "
+                android:textColor="@color/red"
+                android:textSize="16sp"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:text="货物种类:" />
+
+
+            <TextView
+                android:id="@+id/text_table_5"
+                style="@style/scan_code_change_info_style"
+                android:maxLines="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+            <include layout="@layout/text_view_mark_tab"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:text="免费金额\n    (元):"/>
+
+
+            <TextView
+                android:id="@+id/text_table_6"
+                style="@style/scan_code_change_info_style"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+    <LinearLayout
+        style="@style/ll_scan_item_style">
+
+        <!--<TextView
+            style="@style/scan_code_info_style"
+            android:text="入口站:"/>
+
+
+        <EditText
+            android:id="@+id/text_table_9"
+            style="@style/scan_code_change_info_style"/>-->
+
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+
+            <include layout="@layout/text_view_mark_tab"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:gravity="center_vertical|left"
+                android:text="出口车道:"/>
+
+
+            <TextView
+                android:id="@+id/text_table_12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="?attr/custom_text_color_first"
+                android:textSize="@dimen/text16"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/device_item_bg_1dp"/>
+
+    <LinearLayout
+        style="@style/ll_scan_item_style">
+
+        <LinearLayout
+            style="@style/ll_scan_code_info_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" "
+                android:textColor="@color/red"
+                android:textSize="16sp"/>
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:gravity="center_vertical|left"
+                android:text="出口站:"/>
+
+            <TextView
+                android:id="@+id/text_table_10"
+                style="@style/scan_code_change_info_style"/>
+
+            <!-- <EditText
+                 android:enabled="false"
+                 android:id="@+id/text_table_10"
+                 style="@style/scan_code_change_info_style"/>
+-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- <include layout="@layout/device_item_bg_1dp"/>
+
+
+     <ToggleButton
+         android:layout_marginLeft="@dimen/layout_margin10dp"
+         android:layout_marginRight="@dimen/layout_margin10dp"
+         android:id="@+id/btn_edit_able"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_gravity="left"
+         android:layout_marginTop="5dp"
+         android:background="?attr/custom_sure_button_bg"
+         android:elevation="@dimen/layout_margin10dp"
+         android:gravity="center"
+         android:paddingLeft="@dimen/layout_margin10dp"
+         android:paddingRight="@dimen/layout_margin10dp"
+         android:textColor="?attr/custom_sure_button_text"
+         android:textOff="编辑"
+         android:textOn="完成"
+         android:textSize="@dimen/text20"/>
+
+     &lt;!&ndash;<Button
+         android:layout_marginTop="@dimen/layout_margin10dp"
+         android:id="@+id/btn_sure_conclusion"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_marginBottom="15dp"
+         android:layout_marginLeft="@dimen/layout_margin10dp"
+         android:layout_marginRight="@dimen/layout_margin10dp"
+         android:background="?attr/custom_sure_button_bg"
+         android:textColor="?attr/custom_sure_button_text"
+         android:elevation="@dimen/layout_margin10dp"
+         android:text="确定检查结论"
+         android:textSize="20sp"/>&ndash;&gt;
+     <TextView
+         android:id="@+id/draft_save_edit"
+         android:layout_width="60dp"
+         android:layout_height="match_parent"
+         android:text="编辑"
+         android:textColor="?attr/custom_text_color_second"
+         android:textSize="@dimen/text20"
+         android:visibility="gone"/>-->
+
+</LinearLayout>

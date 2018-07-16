@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_gravity="center"
+              android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/text_view_station_header"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/text24"
+        android:textColor="?attr/custom_item_text_color_station"
+        android:text="泰安东"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/text_view_station_end"
+        android:textColor="?attr/custom_item_text_color_station_end"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="收费站"
+        android:textSize="@dimen/text14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

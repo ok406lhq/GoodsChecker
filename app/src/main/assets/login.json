@@ -1,0 +1,10 @@
+{
+
+code:200
+data:{username: "admins", password: "5ded19b9db41e8a5658cdfc21c6a3b00", line: "广深路", station: "上海收费站",…}lanes:"23"
+line:"广深路"
+password:"5ded19b9db41e8a5658cdfc21c6a3b00"
+station:"上海收费站"
+username:"admins"
+msg:"登录成功"
+}

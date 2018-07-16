@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_draft"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="?attr/custom_draft_head_bg"
+        android:padding="@dimen/layout_margin10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="4"
+            android:text="车牌号"
+            style="@style/layout_dragft_activity_style_top"/>
+        <TextView
+            android:layout_weight="4"
+            android:text="保存时间"
+            style="@style/layout_dragft_activity_style_top"/>
+
+        <TextView
+            android:layout_weight="3"
+            android:text="检查人"
+            style="@style/layout_dragft_activity_style_top"/>
+        <TextView
+            android:layout_weight="3"
+            android:text="登记人"
+            style="@style/layout_dragft_activity_style_top"/>
+        <TextView
+            android:id="@+id/text_free_or_pass"
+            android:layout_weight="3"
+            android:text="是否收费"
+            style="@style/layout_dragft_activity_style_top"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/custom_attr_app_bg"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

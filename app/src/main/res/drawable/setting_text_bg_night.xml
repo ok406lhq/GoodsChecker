@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/layout_margin20dp"/>
+    <gradient android:angle="0"
+              android:centerX="0.5"
+              android:centerY="0.5"
+              android:startColor="@color/setting_bg_text_item_night"
+              android:endColor="@color/transparent"
+        />
+</shape>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="road_name">
+        <item>广深路</item>
+        <item>上北路</item>
+        <item>京沪路</item>
+    </array>
+</resources>

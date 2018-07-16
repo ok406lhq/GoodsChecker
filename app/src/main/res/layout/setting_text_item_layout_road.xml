@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="55dp"
+    android:layout_marginTop="@dimen/layout_margin5dp"
+    android:background="?attr/custom_setting_item_static_bg"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_setting">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/layout_margin20dp"
+        android:layout_height="match_parent"
+        android:text="@string/setting_login_road"
+        android:layout_gravity="left"
+        android:gravity="center_vertical"
+        android:textColor="?attr/custom_text_color_second"
+        android:maxLines="1"
+        android:textSize="@dimen/text18"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:gravity="center"
+        android:maxLines="1"
+        android:id="@+id/text_setting_road"
+        android:layout_width="0dp"
+        android:textColor="?attr/custom_text_color_first"
+        android:text="京沪高速"
+        android:textSize="@dimen/text18"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

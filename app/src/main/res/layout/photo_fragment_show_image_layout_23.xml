@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/layout_margin100dp"
+    android:layout_height="135dp"
+    android:layout_marginLeft="@dimen/layout_margin10dp"
+    android:layout_marginRight="@dimen/layout_margin10dp"
+    android:layout_marginTop="@dimen/layout_margin5dp"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_photo">
+
+    <activity.RoundImageView
+        android:id="@+id/image_show_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/demo"
+        app:border_color="?attr/custom_white_black_text"
+        app:border_width="3dp"
+        android:layout_gravity="center_vertical"
+        app:leftBottom_corner_radius="0dp"
+        app:leftTop_corner_radius="20dp"
+        app:rightBottom_corner_radius="20dp"
+        app:rightTop_corner_radius="0dp"
+        app:type="round"/>
+
+
+</LinearLayout>

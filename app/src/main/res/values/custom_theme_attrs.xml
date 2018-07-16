@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="transparent_background" format="color"/>
+    <attr name="black" format="color"/>
+    <attr name="white" format="color"/>
+    <attr name="yellow" format="color"/>
+    <attr name="toolbar_color" format="color"/>
+    <attr name="gray" format="color"/>
+    <attr name="transparent" format="color"/>
+    <attr name="white_black" format="color"/>
+    <attr name="blue" format="color"/>
+    <attr name="red" format="color"/>
+    <attr name="light" format="color"/>
+    <attr name="white_light" format="color"/>
+    <attr name="white_dark" format="color"/>
+    <attr name="green" format="color"/>
+    <attr name="bj_press_number" format="color"/>
+    <attr name="white_light_goods" format="color"/>
+    <attr name="white_light_main" format="color"/>
+    <attr name="white_dark_main" format="color"/>
+    <attr name="white_car_type" format="color"/>
+    <attr name="black_car" format="color"/>
+    <attr name="white_light_main_shut" format="color"/>
+    <attr name="white_dark_login_sure" format="color"/>
+    <attr name="login_check_text_blue" format="color"/>
+    <attr name="login_bg_white" format="color"/>
+
+    <!-- __________________  MainActivity __________________ -->
+
+    <!-- 控制app背景色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_app_bg" format="color|reference"/>
+    <!-- 控制长方形竖直隔条背景色 format:颜色值、资源引用 -->
+    <attr name="custom_shape_static" format="color|reference"/>
+    <!-- 控制字体的黑白颜色景色 format:颜色值、资源引用 -->
+    <attr name="custom_white_black_text" format="color|reference"/>
+    <!-- 控制toolbar的背景色 format:颜色值、资源引用-->
+    <attr name="custom_my_colorPrimary" format="color|reference"/>
+    <!-- 控制toolbar的背景色 format:颜色值、资源引用-->
+    <attr name="custom_company_name_text" format="color|reference"/>
+    <!-- 控制按钮样式的选择器 format:颜色值、资源引用-->
+    <attr name="custom_main_shut_selector_btn" format="color|reference"/>
+    <!-- 控制已拍摄车辆和未拍摄车辆的  1 3  背景样式 format:颜色值、资源引用-->
+    <attr name="custom_shape_line_rect" format="color|reference"/>
+    <!-- 控制已拍摄车辆和未拍摄车辆的   2    背景样式 format:颜色值、资源引用-->
+    <attr name="custom_shape_line_rect_center" format="color|reference"/>
+    <!-- 控制已拍摄车辆和未拍摄车辆的计数的方框背景样式 format:颜色值、资源引用-->
+    <attr name="custom_text_view_math_number" format="color|reference"/>
+    <!-- 控制     侧滑菜单中头布局text的颜色    背景样式 format:颜色值、资源引用-->
+    <attr name="custom_head_layout_text" format="color|reference"/>
+
+    <!-- __________________  MainActivity __________________ -->
+
+    <!-- 控制      车牌     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_number_selection" format="color|reference"/>
+    <!-- 控制      车身     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_body_selection" format="color|reference"/>
+    <!-- 控制      车货物     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_goods_selection" format="color|reference"/>
+
+    <!-- 控制      车货物     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_number_show" format="color|reference"/>
+    <!-- 控制      车货物     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_body_show" format="color|reference"/>
+    <!-- 控制      车货物     背景样式 format:颜色值、资源引用-->
+    <attr name="custom_car_goods_show" format="color|reference"/>
+
+    <!-- 控制     确定按钮的    样式 format:颜色值、资源引用-->
+    <attr name="custom_sure_button_selector" format="color|reference"/>
+
+
+    <!-- __________________  SureGoodsActivity __________________ -->
+
+    <!-- 控制     tab选中以及未选中    字体颜色  format:颜色值、资源引用-->
+    <attr name="custom_tab_text_color" format="color|reference"/>
+    <attr name="custom_tab_text_color_selected" format="color|reference"/>
+    <!-- 控制     tab的背景图片   format:颜色值、资源引用-->
+    <attr name="custom_tab_bg_pager_view" format="color|reference"/>
+
+    <!-- 控制     三个fragment中车站车牌车货物的图片   format:颜色值、资源引用-->
+    <attr name="custom_car_station_main" format="color|reference"/>
+
+
+    <attr name="custom_shape_background_fragment" format="color|reference"/>
+    <attr name="custom_text_color_first" format="color|reference"/>
+
+    <!-- 控制     三个fragment中车站车牌车货物的三个RecyclerView中的字体颜色   format:颜色值、资源引用-->
+    <attr name="custom_item_text_color_number" format="color|reference"/>
+    <attr name="custom_item_text_color_station" format="color|reference"/>
+    <attr name="custom_item_text_color_station_end" format="color|reference"/>
+    <attr name="custom_item_text_color_goods" format="color|reference"/>
+    <attr name="custom_item_text_color_goods_end" format="color|reference"/>
+
+
+    <!-- 控制app标题栏背景色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_app_title_layout_bg" format="color|reference"/>
+    <!-- 控制app内容区背景色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_app_content_layout_bg" format="color|reference"/>
+    <!-- 控制app内容区分割线颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_app_content_layout_div_color" format="color|reference"/>
+
+    <!-- 控制按钮背景色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_btn_bg" format="color|reference"/>
+    <!-- 控制按钮上的字体颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_btn_text_color" format="color|reference"/>
+
+    <!-- 控制副文本字体颜色，如：提示、描述 format:颜色值、资源引用 -->
+    <attr name="custom_attr_sub_text_color" format="color|reference"/>
+    <!-- 控制主文本字体颜色，如：标题、标签 format:颜色值、资源引用 -->
+    <!--<attr name="custom_attr_main_text_color" format="color|reference|"/>-->
+
+    <!-- CheckBox背景色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_check_box_bg" format="reference"/>
+    <!-- CheckBox指示器颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_check_box_thumb_bg" format="reference"/>
+    <!-- 首页大标题颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_main_title_color" format="color|reference"/>
+    <!-- CheckBox指示器marginLeft format:尺寸值、资源引用 -->
+    <attr name="custom_attr_check_box_thumb_margin_left" format="dimension|reference"/>
+
+    <!-- 用户头像显示的透明度 format:尺寸值、资源引用 -->
+    <attr name="custom_attr_user_photo_alpha" format="dimension|reference"/>
+    <!-- 用户头像显示占位Drawable format:颜色值、资源引用 -->
+    <attr name="custom_attr_user_photo_place_holder" format="color|reference"/>
+
+    <!-- 用户昵称字体颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_nickname_text_color" format="color|reference"/>
+    <!-- 用户备注字体颜色 format:颜色值、资源引用 -->
+    <attr name="custom_attr_remark_text_color" format="color|reference"/>
+
+
+    <!-- __________________  SettingActivity __________________ -->
+ <!-- 设置字段条目的背景 format:颜色值、资源引用 -->
+    <attr name="custom_attr_setting_text_bg" format="color|reference"/>
+
+    <attr name="custom_attr_setting_text_color" format="color|reference"/>
+
+    <!-- __________________  configFragment __________________ -->
+ <!-- 容积是否达到80%  是否免费 -->
+    <attr name="custom_toggle_selector" format="color|reference"/>
+
+   <!-- 自定义输入法的按键背景样式-->
+    <attr name="number_fragment_key_bg" format="color|reference"/>
+    <attr name="number_fragment_key_text" format="color|reference"/>
+
+
+    <attr name="custom_fragment_static_text" format="color|reference"/>
+
+</resources>

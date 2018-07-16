@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:paddingTop="4dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/prompt_activation_code"
+        android:textColor="#8000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/activation_firstCode"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#3d93c1"
+            android:gravity="center"
+            android:maxLength="4"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/activation_secondCode"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#3d93c1"
+            android:gravity="center"
+            android:maxLength="4"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="@dimen/layout_margin5dp">
+
+        <EditText
+            android:id="@+id/activation_threeCode"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#3d93c1"
+            android:gravity="center"
+            android:maxLength="4"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/activation_fourCode"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#3d93c1"
+            android:gravity="center"
+            android:maxLength="4"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/activation_fiveCode"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="#3d93c1"
+            android:gravity="center"
+            android:maxLength="4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <CheckBox
+                android:id="@+id/activation_agree_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/activation_agreement_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activation_tips"
+            android:textSize="10dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/activation_network_info"
+        android:textColor="#8000"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/activation_sign_in_button"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="56dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:clickable="false"
+            android:enabled="false"
+            android:text="@string/action_sign_in"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/activation_sign_out_button"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="56dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_select"
+            android:text="@string/action_sign_out"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:background="@color/white"
+              android:id="@+id/ll_setting_operator"
+              android:orientation="horizontal">
+
+              <!--android:background="?attr/custom_setting_recycler_item_bg"-->
+    <TextView
+        android:id="@+id/text_setting_recycler_job_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/layout_margin5dp"
+        android:layout_gravity="left"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="500001"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text20"/>
+
+    <TextView
+        android:id="@+id/text_setting_recycler_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="鱼雷"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text20"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <CheckBox
+            android:id="@+id/operator_check_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/layout_margin10dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <CheckBox
+            android:id="@+id/operator_login_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/text_setting_recycler_delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|right"
+        android:maxLines="1"
+        android:text="@string/delete"
+        android:textColor="@color/red"/>
+
+
+</LinearLayout>

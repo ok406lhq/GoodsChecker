@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_margin="10dp"
+        android:text="货种类"
+        android:textSize="14sp"
+        style="@style/RadioButton_goods_style"
+        android:background="@drawable/rb_bg_selector_day"
+        android:id="@+id/btn_good_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

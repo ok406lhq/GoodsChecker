@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主界面三个列表框的字体样式-->
+    <attr name="custom_three_list_text_color" format="color|reference"/>
+    <!-- 主界面三个列表框的背景样式-->
+    <attr name="custom_three_list_background_color" format="color|reference"/>
+    <!-- 主界面三个列表框总体的背景样式样式-->
+    <attr name="custom_three_all_background_color" format="color|reference"/>
+
+    <attr name="custom_shape_background_main_else" format="color|reference"/>
+    <!-- 文本框的背景样式-->
+    <attr name="text_box_bg" format="color|reference"/>
+
+ <!-- 主界面可用空间大小的字体颜色样式-->
+    <attr name="custom_main_room_text_color" format="color|reference"/>
+    <attr name="custom_main_room_left_img" format="color|reference"/>
+    <attr name="custom_main_room_background_1_color" format="color|reference"/>
+    <attr name="custom_main_room_background_2_color" format="color|reference"/>
+
+    <!--ShowActivity-->
+    <attr name="custom_rb_bg_selector" format="color|reference"/>
+    <attr name="custom_rb_text_color_selector" format="color|reference"/>
+    <attr name="custom_device_bg_color" format="color|reference"/>
+    <attr name="custom_text_color_second" format="color|reference"/>
+
+    <!--SureActivity-->
+    <attr name="custom_text_box_stroke" format="color|reference"/>
+    <attr name="custom_conclusion_rb_bg" format="color|reference"/>
+    <attr name="custom_sure_button_bg" format="color|reference"/>
+    <attr name="custom_sure_button_text" format="color|reference"/>
+
+    <!--SureActivity-->
+    <attr name="custom_setting_item_change_bg" format="color|reference"/>
+    <attr name="custom_setting_item_static_bg" format="color|reference"/>
+    <attr name="custom_setting_four_info" format="color|reference"/>
+    <attr name="custom_setting_recycler_item_bg" format="color|reference"/>
+    <attr name="custom_add_operator_bg" format="color|reference"/>
+
+    <!--DraftActivity-->
+    <attr name="custom_draft_head_bg" format="color|reference"/>
+    <attr name="custom_progress_bar" format="color|reference"/>
+
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_config"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="必填项配置(必须提交的数据)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/layout_margin5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="称重"
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="15sp"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_config_weight"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/toggle_selector_day"
+                android:paddingBottom="@dimen/layout_margin10dp"
+                android:paddingTop="@dimen/layout_margin10dp"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/layout_margin5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="免费"
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="15sp"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_config_free"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/toggle_selector_day"
+                android:paddingBottom="@dimen/layout_margin10dp"
+                android:paddingTop="@dimen/layout_margin10dp"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+        </LinearLayout> <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/layout_margin5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="车型"
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="15sp"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_config_carType"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/toggle_selector_day"
+                android:paddingBottom="@dimen/layout_margin10dp"
+                android:paddingTop="@dimen/layout_margin10dp"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/layout_margin5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="出口"
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="15sp"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_config_export"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/toggle_selector_day"
+                android:paddingBottom="@dimen/layout_margin10dp"
+                android:paddingTop="@dimen/layout_margin10dp"
+                android:textOff="@null"
+                android:textOn="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

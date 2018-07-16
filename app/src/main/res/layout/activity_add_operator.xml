@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/custom_attr_app_bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_setting_add"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_margin10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="?attr/custom_add_operator_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/layout_margin10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2"
+                android:textColor="?attr/custom_text_color_second"
+                android:gravity="left|center_vertical"
+                android:text="工号"
+                android:textSize="@dimen/text18"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                >
+
+                <EditText
+                    android:id="@+id/add_operator_job_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                android:textColor="?attr/custom_text_color_first"
+                    android:hint="请输入六位数的工号"
+                    android:imeActionId="@+id/login"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text18"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/layout_margin10dp"
+            android:background="?attr/custom_add_operator_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/layout_margin10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2"
+                android:textColor="?attr/custom_text_color_second"
+                android:gravity="left|center_vertical"
+                android:text="姓名"
+                android:textSize="@dimen/text18"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/add_operator_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                android:textColor="?attr/custom_text_color_first"
+                    android:hint="请输入姓名"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text18"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/layout_margin10dp"
+            android:background="?attr/custom_add_operator_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/layout_margin10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:textColor="?attr/custom_text_color_second"
+                android:layout_weight="2"
+                android:gravity="left|center_vertical"
+                android:text="默认检查人"
+                android:textSize="@dimen/text18"/>
+
+            <CheckBox
+                android:id="@+id/add_operator_check_person"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/layout_margin10dp"
+            android:background="?attr/custom_add_operator_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/layout_margin10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2"
+                android:textColor="?attr/custom_text_color_second"
+                android:gravity="left|center_vertical"
+                android:text="默认检查人"
+                android:textSize="@dimen/text18"/>
+
+            <CheckBox
+                android:id="@+id/add_operator_login_person"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center_vertical"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_operator_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/layout_margin20dp"
+            android:background="?attr/custom_sure_button_bg"
+            android:elevation="@dimen/layout_margin10dp"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="?attr/custom_sure_button_text"
+            android:textSize="@dimen/text22"/>
+    </LinearLayout>
+
+</LinearLayout>

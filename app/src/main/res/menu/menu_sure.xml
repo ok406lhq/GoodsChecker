@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_bar_cancer"
+          android:orderInCategory="100"
+          android:title="@string/menu_bar_title_cancer"
+          app:showAsAction="always"/>
+</menu>

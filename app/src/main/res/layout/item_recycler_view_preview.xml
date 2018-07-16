@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/item_recycler_view_preview"
+              android:layout_width="match_parent"
+              android:layout_height="70dp"
+              android:background="#e4f6f2"
+              android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/preview_text_car_number"
+        style="@style/layout_dragft_activity_style_content"
+        android:layout_weight="4"
+        android:text="车牌号"/>
+
+    <TextView
+        android:id="@+id/preview_text_shutTime"
+        style="@style/layout_dragft_activity_style_content"
+        android:layout_weight="4"
+        android:text="保存时间"/>
+
+    <TextView
+        android:id="@+id/preview_text_check"
+        style="@style/layout_dragft_activity_style_content"
+        android:layout_weight="3"
+        android:text="检查人"/>
+
+    <TextView
+        android:id="@+id/preview_text_login"
+        style="@style/layout_dragft_activity_style_content"
+        android:layout_weight="3"
+        android:text="登记人"/>
+
+    <LinearLayout
+        style="@style/layout_dragft_activity_style_content"
+        android:layout_weight="3"
+        >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/preview_img_isPass"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/check_wait"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+

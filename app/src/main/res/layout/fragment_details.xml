@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+ <!--   <Button
+        android:id="@+id/yanzheng"
+        android:text="验证"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+    <RelativeLayout
+        android:id="@+id/detail_fragment_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/detail_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:descendantFocusability="afterDescendants"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/layout_margin10dp"
+            android:layout_marginRight="@dimen/layout_margin10dp"
+            >
+
+            <TextView
+
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/day_color_green"/>
+
+            <TextView
+                android:layout_gravity="right"
+                style="@style/main_text_static_tv_style"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/image_license"
+                android:drawablePadding="5dp"
+                android:text="车牌号:"/>
+
+
+            <com.wolf.zero.greenroad.view.MylinearLayout
+                android:id="@+id/ll_license"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                >
+
+
+                <TextView
+                    android:id="@+id/et_input_box_1"
+                    style="@style/number_edit_box_style"
+                    android:layout_weight="1.2"
+                    android:cursorVisible="false"
+                    android:textSize="@dimen/text22"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_2"
+                    style="@style/number_edit_box_style"
+                    android:layout_weight="1.2"
+                    android:cursorVisible="false"
+                    android:textSize="@dimen/text22"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_3"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_4"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_5"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_6"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_7"
+                    style="@style/number_edit_box_style"
+                    android:cursorVisible="false"/>
+
+                <TextView
+                    android:id="@+id/et_input_box_8"
+                    style="@style/number_edit_box_style"
+                    android:background="#372da4f3"
+                    android:cursorVisible="false"/>
+            </com.wolf.zero.greenroad.view.MylinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_license_identify"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_btn_license"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/detail_below_ll_license"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/detail_1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:descendantFocusability="afterDescendants"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/layout_margin10dp"
+                android:layout_marginRight="@dimen/layout_margin10dp"
+                >
+
+                <TextView
+
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#37ac00"/>
+
+                <TextView
+                    android:layout_gravity="right"
+                    style="@style/main_text_static_tv_style"
+                    android:layout_marginLeft="15dp"
+                    android:drawableLeft="@drawable/image_goods"
+                    android:drawablePadding="5dp"
+                    android:text="货物:"/>
+
+                <TextView
+                    android:id="@+id/tv_change_goods_detail"
+                    style="@style/main_text_change_tv_style"/>
+
+
+                <ImageView
+                    android:id="@+id/btn_open_goods"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/image_btn_goods"/>
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/title_text_toll"
+                layout="@layout/details_fragment_title_layout"/>
+
+            <include layout="@layout/detail_fragment_toll"/>
+
+            <include
+                android:id="@+id/title_text_photo"
+                layout="@layout/details_fragment_title_layout2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_margin5dp"
+                android:paddingLeft="@dimen/layout_margin10dp"
+                android:paddingRight="@dimen/layout_margin10dp"
+                android:paddingTop="@dimen/layout_margin5dp">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/RvRootView"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="@dimen/layout_margin5dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_shoot_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </android.support.v7.widget.RecyclerView>
+
+                    <ImageView
+                        android:id="@+id/activity_recycler_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/page_left"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageView
+                        android:id="@+id/activity_recycler_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/page_right"
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/license_rl_license_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/detail_1"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:background="#452da4f3"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.inputmethodservice.KeyboardView
+                android:background="#452da4f3"
+                android:id="@+id/keyboard_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyBackground="@color/day_color_green"
+                android:keyTextColor="@color/black"
+                android:keyTextSize="20sp"
+                android:labelTextSize="20sp"
+                android:shadowColor="#e7e7e7"
+                android:shadowRadius="1"
+                />
+            </LinearLayout>
+
+ <!--               android:keyBackground="?attr/number_fragment_key_bg"
+                android:keyTextColor="?attr/number_fragment_key_text"
+ -->           <Button
+                android:id="@+id/license_btn_license_sure"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="?attr/custom_sure_button_text"
+                android:textSize="20sp"
+                android:background="@color/day_color_green"
+                android:text="确 定"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/goods_layout"/>
+</RelativeLayout>

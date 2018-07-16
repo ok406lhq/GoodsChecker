@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="science_array_shuichanpin">
+        <item>C001鱼类</item>
+        <item>C002虾类</item>
+        <item>C003贝类</item>
+        <item>C004蟹类</item>
+        <item>C005海带</item>
+        <item>C006紫菜</item>
+        <item>C007海蜇</item>
+        <item>C008海参</item>
+    </array>
+
+
+    <array name="science_array_chuqin">
+        <item>D001猪</item>
+        <item>D002牛</item>
+        <item>D003羊</item>
+        <item>D004马</item>
+        <item>D005驴/骡</item>
+        <item>D006鸡</item>
+        <item>D007鸭</item>
+        <item>D008鹅</item>
+        <item>D009家兔</item>
+        <item>D010食用蛙类</item>
+        <item>D011蜜蜂/转地放蜂</item>
+    </array>
+
+    <array name="science_array_roudannai">
+        <item>E001鸡蛋</item>
+        <item>E002鸭蛋</item>
+        <item>E003鹅蛋</item>
+        <item>E004鹌鹑蛋</item>
+        <item>E005家畜肉</item>
+        <item>E006家禽肉</item>
+        <item>E007新鲜奶</item>
+    </array>
+
+    <array name="science_array_zaliang">
+        <item>F001马铃薯</item>
+        <item>F002红薯</item>
+        <item>F003白薯</item>
+        <item>F004芋头</item>
+        <item>F005山药</item>
+        <item>F006玉米</item>
+        <item>F007花生</item>
+    </array>
+
+
+    <array name="science_array_shuiguo">
+        <item>B001苹果</item>
+        <item>B002梨子</item>
+        <item>B003海棠</item>
+        <item>B004山楂</item>
+        <item>B005桃子</item>
+        <item>B006李子</item>
+        <item>B007杏子</item>
+        <item>B008杨梅</item>
+        <item>B009樱桃</item>
+        <item>B010葡萄</item>
+        <item>B011提子</item>
+        <item>B012草莓</item>
+        <item>B013猕猴桃</item>
+        <item>B014石榴</item>
+        <item>B015桑葚</item>
+        <item>B016橙子</item>
+        <item>B017橘子</item>
+        <item>B018柑橘</item>
+        <item>B019柚子</item>
+        <item>B020柠檬</item>
+        <item>B021香蕉</item>
+        <item>B022菠萝</item>
+        <item>B023龙眼</item>
+        <item>B024荔枝</item>
+        <item>B025橄榄</item>
+        <item>B026枇杷</item>
+        <item>B027椰子</item>
+        <item>B028芒果</item>
+        <item>B029杨桃</item>
+        <item>B030木瓜</item>
+        <item>B031火龙果</item>
+        <item>B032番石榴</item>
+        <item>B033莲雾</item>
+        <item>B034枣子</item>
+        <item>B035柿子</item>
+        <item>B036无花果</item>
+        <item>B037西瓜</item>
+        <item>B038甜瓜</item>
+        <item>B039哈密瓜</item>
+        <item>B040香瓜</item>
+        <item>B041伊丽莎白瓜</item>
+        <item>B042华莱士瓜</item>
+
+    </array>
+
+
+    <array name="science_array_shucai">
+        <item>A001大白菜</item>
+        <item>A002油菜</item>
+        <item>A003小青菜</item>
+        <item>A004菜薹</item>
+        <item>A005菜花</item>
+        <item>A006芥蓝</item>
+        <item>A007西兰花</item>
+        <item>A008结球甘蓝</item>
+        <item>A009萝卜</item>
+
+
+        <item>A010胡萝卜</item>
+        <item>A011芜菁</item>
+        <item>A012芹菜</item>
+        <item>A013菠菜</item>
+        <item>A014莴笋</item>
+        <item>A015生菜</item>
+        <item>A016空心菜</item>
+        <item>A017香菜</item>
+        <item>A018茼蒿</item>
+        <item>A019茴香</item>
+
+
+        <item>A020苋菜</item>
+        <item>A021木耳菜</item>
+        <item>A022洋葱</item>
+        <item>A023大葱</item>
+        <item>A024香葱</item>
+        <item>A025蒜苗</item>
+        <item>A026蒜苔</item>
+        <item>A027韭菜</item>
+        <item>A028大蒜</item>
+        <item>A029生姜</item>
+
+        <item>A030茄子</item>
+        <item>A031青椒</item>
+        <item>A032辣椒</item>
+        <item>A033西红柿</item>
+        <item>A034扁豆</item>
+        <item>A035荚豆</item>
+        <item>A036豇豆</item>
+        <item>A037四季豆</item>
+        <item>A038毛豆</item>
+        <item>A039蚕豆</item>
+
+
+        <item>A040豆芽</item>
+        <item>A041豌豆苗</item>
+        <item>A042四棱豆</item>
+        <item>A043豌豆</item>
+        <item>A044黄瓜</item>
+        <item>A045丝瓜</item>
+        <item>A046冬瓜</item>
+        <item>A047西葫芦</item>
+        <item>A048苦瓜</item>
+        <item>A049南瓜</item>
+
+
+        <item>A050佛手瓜</item>
+        <item>A051蛇瓜</item>
+        <item>A052节瓜</item>
+        <item>A053瓠瓜</item>
+        <item>A054莲藕</item>
+        <item>A055水芹</item>
+        <item>A056茭白</item>
+        <item>A057荸荠</item>
+        <item>A058平菇</item>
+        <item>A059原菇</item>
+
+
+        <item>A060金针菇</item>
+        <item>A061滑菇</item>
+        <item>A062蘑菇</item>
+        <item>A063木耳/不含干木耳</item>
+        <item>A064竹笋</item>
+        <item>A065莴笋</item>
+        <item>A066金针菜/黄花菜</item>
+        <item>A067香椿</item>
+
+    </array>
+</resources>

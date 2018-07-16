@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="GreenRoadTheme" parent="AppTheme.NoActionBar">
+
+    </style>
+
+    <style name="GreenRoadTheme.Day">
+
+        <!-- __________________  MainActivity __________________ -->
+
+        <item name="custom_white_black_text">@color/change_white_black_text_day</item>
+
+        <!-- 控制toolbar的背景色 -->
+        <item name="custom_my_colorPrimary">@color/toolbar_color_day</item>
+
+        <item name="custom_sure_button_bg">@drawable/sure_button_selector_day</item>
+        <item name="custom_sure_button_text">@color/sure_button_text_day</item>
+
+        <item name="custom_shape_background_main_else">@drawable/shape_background_main_else_day
+        </item>
+
+        <item name="custom_attr_app_bg">@color/bg_app_day</item>
+
+        <!-- 一级文字的颜色 -->
+        <item name="custom_text_color_first">@color/first_text_color_day</item>
+
+        <item name="custom_shape_background_fragment">@drawable/shape_background_main_station_day
+        </item>
+
+        <item name="custom_three_list_text_color">@color/three_list_text_color_day</item>
+
+        <item name="custom_three_list_background_color">@color/three_list_background_color_day
+        </item>
+
+        <item name="custom_three_all_background_color">@color/three_all_background_color_day</item>
+
+        <item name="custom_shape_static">@drawable/shape_static_day</item>
+
+
+        <!-- __________________  room __________________ -->
+
+        <item name="custom_main_room_text_color">@color/main_room_text_color_day</item>
+        <item name="custom_main_room_left_img">@drawable/main_room_left_img_day</item>
+        <item name="custom_main_room_background_1_color">#d8d8d8</item>
+        <item name="custom_main_room_background_2_color">#b3b3b3</item>
+
+
+        <!-- __________________  tab __________________ -->
+
+        <item name="custom_tab_text_color">@color/tab_text_color_day</item>
+        <item name="custom_tab_text_color_selected">@color/white</item>
+        <item name="custom_tab_bg_pager_view">@color/tab_bg_view_pager_day</item>
+
+        <!-- __________________  showActivity __________________ -->
+
+        <item name="custom_rb_bg_selector">@drawable/rb_bg_selector_day</item>
+        <item name="custom_rb_text_color_selector">@color/license_color_text_day</item>
+        <item name="custom_device_bg_color">@color/device_bg_color_day</item>
+        <item name="custom_text_color_second">@color/text_color_second_day</item>
+        <item name="text_box_bg">@drawable/text_box_bg_day</item>
+
+        <!-- __________________  sureActivity __________________ -->
+        <item name="custom_text_box_stroke">@drawable/text_box_stroke_day</item>
+        <item name="custom_conclusion_rb_bg">@drawable/conclusion_check_box_day</item>
+
+        <!-- __________________  settingActivity __________________ -->
+        <item name="custom_setting_item_change_bg">@drawable/setting_item_change_bg_day</item>
+        <item name="custom_setting_item_static_bg">@drawable/setting_item_static_bg_day</item>
+        <item name="custom_setting_four_info">@color/setting_four_info_bg_day</item>
+        <item name="custom_setting_recycler_item_bg">@color/day_color_green</item>
+        <item name="custom_add_operator_bg">@drawable/add_operator_item_bg_day</item>
+
+
+          <!-- __________________  draftActivity __________________ -->
+        <item name="custom_draft_head_bg">#f0f0f0</item>
+        <item name="custom_progress_bar">@color/white</item>
+
+
+
+
+
+
+
+        <item name="custom_company_name_text">@color/custom_company_day</item>
+
+
+        <item name="custom_text_view_math_number">@drawable/text_view_math_number_day</item>
+
+        <item name="custom_head_layout_text">@color/head_layout_text_day</item>
+
+        <!-- __________________  PhotoActivity __________________ -->
+
+        <item name="custom_car_body_selection">@drawable/car_body_selection_day</item>
+        <item name="custom_car_goods_selection">@drawable/car_goods_selection_day</item>
+
+        <item name="custom_car_number_show">@drawable/image_car_number</item>
+        <item name="custom_car_body_show">@drawable/image_car_goods</item>
+        <item name="custom_car_goods_show">@drawable/image_car_goods</item>
+
+
+        <!-- __________________     Fragment      __________________ -->
+
+        <item name="custom_car_station_main">@drawable/car_station_light</item>
+
+
+        <item name="custom_item_text_color_number">@color/item_text_color_day</item>
+        <item name="custom_item_text_color_station">@color/item_text_color_day</item>
+        <item name="custom_item_text_color_station_end">@color/item_text_color_end_day</item>
+        <item name="custom_item_text_color_goods">@color/item_text_color_day</item>
+        <item name="custom_item_text_color_goods_end">@color/item_text_color_end_day</item>
+
+
+        <!-- 自定义输入法的按键背景样式-->
+        <item name="number_fragment_key_bg">@drawable/number_key_bg_selector_day</item>
+        <item name="number_fragment_key_text">@color/number_fragment_key_text_day</item>
+
+
+        <!-- __________________     Fragment      __________________ -->
+
+        <item name="custom_attr_setting_text_bg">@drawable/setting_text_bg_day</item>
+        <item name="custom_attr_setting_text_color">@color/setting_text_color_day</item>
+
+        <!-- __________________     DetailFragment      __________________ -->
+
+
+        <item name="custom_toggle_selector">@drawable/toggle_selector_day</item>
+
+    </style>
+
+
+    <style name="GreenRoadTheme.Night">
+
+
+        <!-- __________________  night __________________ -->
+
+
+        <!-- __________________  MainActivity __________________ -->
+
+        <item name="custom_my_colorPrimary">@color/toolbar_color_night</item>
+        <item name="custom_sure_button_bg">@drawable/sure_button_selector_night</item>
+        <item name="custom_sure_button_text">@color/sure_button_text_night</item>
+
+        <item name="custom_shape_background_main_else">@drawable/shape_background_main_else_night
+        </item>
+
+        <item name="custom_shape_background_fragment">
+            @drawable/shape_background_main_station_and_else_night
+        </item>
+
+        <item name="custom_text_color_first">@color/first_text_color_night</item>
+
+        <item name="custom_three_list_text_color">@color/three_list_text_color_night</item>
+
+        <item name="custom_three_list_background_color">@color/three_list_background_color_night
+        </item>
+
+        <item name="custom_three_all_background_color">@color/three_all_background_color_night
+        </item>
+
+        <item name="custom_main_room_text_color">@color/main_room_text_color_night</item>
+
+        <item name="custom_attr_app_bg">@color/bg_app_night</item>
+
+        <item name="custom_main_room_left_img">@drawable/main_room_left_img_night</item>
+        <item name="custom_main_room_background_1_color">#333333</item>
+        <item name="custom_main_room_background_2_color">#797979</item>
+
+
+        <item name="custom_shape_static">@drawable/shape_static_night</item>
+
+        <item name="custom_tab_text_color">@color/tab_text_color_night</item>
+        <item name="custom_tab_text_color_selected">@color/tab_text_color_selected_night</item>
+        <item name="custom_tab_bg_pager_view">@color/tab_bg_view_pager_night</item>
+
+        <!-- __________________  showActivity __________________ -->
+
+        <item name="custom_rb_bg_selector">@drawable/rb_bg_selector_night</item>
+        <item name="custom_rb_text_color_selector">@color/license_color_text_night</item>
+        <item name="custom_device_bg_color">@color/device_bg_color_night</item>
+        <item name="custom_text_color_second">@color/text_color_second_night</item>
+        <item name="text_box_bg">@drawable/text_box_bg_night</item>
+
+        <!-- __________________  sureActivity __________________ -->
+        <item name="custom_text_box_stroke">@drawable/text_box_stroke_night</item>
+        <item name="custom_conclusion_rb_bg">@drawable/conclusion_check_box_night</item>
+
+        <!-- __________________  settingActivity __________________ -->
+        <item name="custom_setting_item_change_bg">@drawable/setting_item_change_bg_night</item>
+        <item name="custom_setting_item_static_bg">@drawable/setting_item_static_bg_night</item>
+        <item name="custom_setting_four_info">@color/setting_four_info_bg_night</item>
+        <item name="custom_add_operator_bg">@drawable/add_operator_item_bg_night</item>
+        <item name="custom_setting_recycler_item_bg">@color/gray</item>
+
+        <!-- __________________  draftActivity __________________ -->
+        <item name="custom_draft_head_bg">#494949</item>
+        <item name="custom_progress_bar">#1e1e1e</item>
+
+
+
+
+
+
+        <item name="custom_white_black_text">@color/change_white_black_text_night</item>
+
+        <item name="custom_company_name_text">@color/custom_company_night</item>
+
+
+        <item name="custom_text_view_math_number">@drawable/text_view_math_number_night</item>
+
+        <item name="custom_head_layout_text">@color/head_layout_text_night</item>
+
+
+        <!-- __________________  PhotoActivity __________________ -->
+
+        <item name="custom_car_body_selection">@drawable/car_body_selection_night</item>
+        <item name="custom_car_goods_selection">@drawable/car_goods_selection_night</item>
+
+
+        <item name="custom_car_body_show">@drawable/car_body_dark</item>
+        <item name="custom_car_goods_show">@drawable/car_goods_dark</item>
+
+
+        <!-- __________________  SureGoodsActivity __________________ -->
+
+
+        <!-- __________________     Fragment      __________________ -->
+
+        <item name="custom_car_station_main">@drawable/car_station_dark</item>
+
+
+        <item name="custom_fragment_static_text">@color/first_text_color_night</item>
+
+        <item name="custom_item_text_color_number">@color/item_text_color_night</item>
+        <item name="custom_item_text_color_station">@color/item_text_color_night</item>
+        <item name="custom_item_text_color_station_end">@color/item_text_color_end_night</item>
+        <item name="custom_item_text_color_goods">@color/item_text_color_night</item>
+        <item name="custom_item_text_color_goods_end">@color/item_text_color_end_night</item>
+
+        <!-- 自定义输入法的按键背景样式-->
+        <item name="number_fragment_key_bg">@drawable/number_key_bg_selector_night</item>
+        <item name="number_fragment_key_text">@color/number_fragment_key_text_night</item>
+
+        <!-- __________________     Fragment      __________________ -->
+
+        <item name="custom_attr_setting_text_bg">@drawable/setting_text_bg_night</item>
+        <item name="custom_attr_setting_text_color">@color/setting_text_color_night</item>
+
+        <!-- __________________     DetailFragment      __________________ -->
+
+        <item name="custom_toggle_selector">@drawable/toggle_selector_night</item>
+
+
+    </style>
+
+    <style name="GreenRoadTheme.Day.Preview"/>
+
+    <style name="GreenRoadTheme.Night.Preview"/>
+
+
+    <!-- MainActivity中最下面公司以及版本信息的字体颜色-->
+    <color name="custom_company_night">#728cae</color>
+    <color name="custom_company_day">#616161</color>
+
+    <!-- ToolBar的背景颜色-->
+    <color name="toolbar_color_night">#181919</color>
+    <color name="toolbar_color_day">#2da4f3</color>
+
+    <!--一级字体的颜色-->
+    <color name="first_text_color_day">#292929</color>
+    <color name="first_text_color_night">#ffffff</color>
+
+    <!--二级字体颜色颜色-->
+    <color name="text_color_second_day">#686767</color>
+    <color name="text_color_second_night">#c9c9c9</color>
+
+
+    <!--三个列表字体的颜色-->
+    <color name="three_list_text_color_day">#797979</color>
+    <color name="three_list_text_color_night">#e9e9e9</color>
+
+    <!--三个列表背景的颜色-->
+    <color name="three_list_background_color_day">@color/white</color>
+    <color name="three_list_background_color_night">#555555</color>
+
+    <!--三个列表总体的背景的颜色-->
+    <color name="three_all_background_color_day">#f0f0f0</color>
+    <color name="three_all_background_color_night">#2c2c2c</color>
+
+    <!--主界面可用空间大小的字体的颜色-->
+    <color name="main_room_text_color_day">#4d4d4d</color>
+    <color name="main_room_text_color_night">#e9e9e9</color>
+
+
+    <!-- 车辆计数(大横条)背景以及 车牌,车身,货物 的背景-->
+    <color name="shape_line_rect_day">#b0a4ef</color>
+    <color name="shape_line_rect_night">#cfcffa</color>
+
+    <!-- 车辆计数数字(小方框)的背景-->
+    <color name="text_view_math_number_night">#0c0c54</color>
+    <color name="text_view_math_number_day">#4ec2cf</color>
+
+    <!--侧滑菜单的头布局中文字的颜色-->
+    <color name="head_layout_text_night">#eeeef4</color>
+    <color name="head_layout_text_day">#28287e</color>
+
+
+    <!--fragment 中三组RecyclerView的字体颜色-->
+    <color name="item_text_color_day">#0075ab</color>
+    <color name="item_text_color_night">#ffffff</color>
+
+    <color name="item_text_color_end_day">#556376</color>
+    <color name="item_text_color_end_night">#3f8b5e</color>
+
+    <!--背景颜色-->
+    <color name="bg_app_night">#1e1e1e</color>
+    <color name="bg_app_day">#f6f6f9</color>
+
+    <!--tablayout的背景颜色-->
+    <color name="tab_bg_view_pager_night">#333333</color>
+    <color name="tab_bg_view_pager_day">#ffffff</color>
+
+    <!--tabLayoutw文字选中与未选中的字体颜色-->
+    <color name="tab_text_color_day">@color/white</color>
+    <color name="tab_text_color_night">@color/white</color>
+
+    <color name="tab_text_color_selected_day">#66ccaa</color>
+    <color name="tab_text_color_selected_night">@color/white</color>
+
+    <!--分隔横条的背景颜色-->
+    <color name="device_bg_color_day">#e4e4e4</color>
+    <color name="device_bg_color_night">#4b4b4b</color>
+    <!--checkActivity的radioButton的背景颜色-->
+    <color name="conclusion_rb_bg_day">#c6cececf</color>
+    <color name="conclusion_rb_bg_night">#303030</color>
+
+    <!--Button的背景颜色-->
+    <color name="sure_button_stroke_day">#ededed</color>
+    <color name="sure_button_stroke_night">#e4e4e4</color>
+
+    <color name="sure_button_text_day">@color/white</color>
+    <color name="sure_button_text_night">@color/color333333</color>
+
+    <color name="sure_button_selected_day">#94afac</color>
+    <color name="sure_button_selected_night">#9e9e9e</color>
+
+    <!--Setting的背景颜色-->
+    <color name="setting_four_info_bg_day">#e5e5e5</color>
+    <color name="setting_four_info_bg_night">#686868</color>
+
+
+</resources>

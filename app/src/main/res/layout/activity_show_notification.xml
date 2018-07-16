@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:elevation="0dp"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar_notification"-->
+    <!--style="@style/style_toolbar"-->
+    <!--app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_notification"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="提交用户:"/>
+
+            <TextView
+                android:id="@+id/text_notify_user"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="车型:"/>
+
+            <TextView
+                android:id="@+id/text_notify_carType"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="车牌号:"/>
+
+            <TextView
+                android:id="@+id/text_notify_number"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="货物:"/>
+
+            <TextView
+                android:id="@+id/text_notify_huowu"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--style="@style/title_activity_preview_all_detail_style"-->
+        <!--android:text="称重:"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_table_4"-->
+        <!--style="@style/content_activity_preview_all_detail_style"/>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="出口车道:"/>
+
+            <TextView
+                android:id="@+id/text_notify_export"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--style="@style/title_activity_preview_all_detail_style"-->
+        <!--android:text="是否免费:"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_table_6"-->
+        <!--style="@style/content_activity_preview_all_detail_style"/>-->
+
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="检查人:"/>
+
+            <TextView
+                android:id="@+id/text_notify_check"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="登记人:"/>
+
+            <TextView
+                android:id="@+id/text_notify_login"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/title_activity_preview_all_detail_style"
+                android:text="提交时间:"/>
+
+            <TextView
+                android:id="@+id/text_notify_submit_time"
+                style="@style/content_activity_preview_all_detail_style"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/ll_reason_failure"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_margin10dp"
+            >
+            <!--android:visibility="gone"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="不通过原因"
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="@dimen/text16"/>
+
+            <TextView
+                android:id="@+id/text_notify_failure"
+                android:text="akshjdkjasdkjaklashdkaksjdkasdkjskajldlskakskld"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_margin5dp"
+                android:background="?attr/text_box_bg"
+                android:gravity="top|left"
+                android:paddingLeft="@dimen/layout_margin5dp"
+                android:paddingRight="@dimen/layout_margin5dp"
+                android:textColor="?attr/custom_text_color_first"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

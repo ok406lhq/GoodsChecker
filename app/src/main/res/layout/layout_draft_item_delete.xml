@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_draft_item_detete"
+        android:text="删除"
+        android:textColor="@color/color333333"
+        android:textSize="@dimen/text16">
+
+</Button>

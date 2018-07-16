@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/show_3_photo"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="@dimen/layout_margin10dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_photo">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+
+        android:id="@+id/show_3_1_car_number"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="center"
+        android:src="?attr/custom_car_number_show"
+        app:riv_corner_radius="@dimen/layout_margin10dp"
+        app:riv_oval="true"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/show_3_2_car_body"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="center"
+        android:src="?attr/custom_car_body_show"
+        app:riv_corner_radius="@dimen/layout_margin10dp"
+        app:riv_oval="true"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/show_3_3_car_goods"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="center"
+        android:src="?attr/custom_car_goods_show"
+        app:riv_corner_radius="@dimen/layout_margin10dp"
+        app:riv_oval="true"/>
+
+</LinearLayout>
