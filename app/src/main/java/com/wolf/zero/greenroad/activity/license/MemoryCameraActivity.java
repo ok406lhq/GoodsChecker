@@ -206,6 +206,7 @@ public class MemoryCameraActivity extends BaseActivity implements
 
         }
     };
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
