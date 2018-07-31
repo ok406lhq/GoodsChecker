@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.orhanobut.logger.Logger;
 import com.wolf.zero.greenroad.GreenRoadApplication;
@@ -48,6 +49,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     EditText mEt_password;
     @BindView(R.id.check_box_pwd)
     CheckBox mCheckBox;
+    @BindView(R.id.tv_net)
+    TextView mTv_net;
+    @BindView(R.id.btn_modify)
+    Button mBt_modify;
+
     private boolean mIsConnected;
     private static int TIMEGAP = 3;
     private LoginActivity mActivity;
@@ -63,6 +69,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         initData();
         initView();
 
+        mBt_modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mEt_user_name.setText("");
+                mEt_password.setText("");
+                mCheckBox.setChecked(false);
+                LineConfigActivity.actionStart(LoginActivity.this, GlobalManager.OTHER2PORT);
+            }
+        });
 
     }
 
@@ -82,6 +97,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         mBt_login = (Button) findViewById(R.id.bt_login);
 
         mBt_login.setOnClickListener(mActivity);
+
+        String url = (String) SPUtils.get(GreenRoadApplication.sApplication, SPUtils.CONFIG_PORT, "88");
+        mTv_net.setText(url);
 //        mLoginRegister.setOnClickListener(mActivity);
 
 
@@ -109,7 +127,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 //                licence();
                 startMainActivity(v);
                 break;
-
             default:
                 break;
 
@@ -214,10 +231,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             }
         }
     }
-/*
+    /*
 
 
-    */
+     */
 /**
  * 根据有无网络连接判断时间差内登陆的情形
  *
