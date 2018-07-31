@@ -39,7 +39,6 @@ import rx.Subscriber;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener, TextChangeWatcher.AfterTextListener {
 
-
     @BindView(R.id.rl_progress_login)
     RelativeLayout mRlProgressLogin;
     private Button mBt_login;
@@ -57,7 +56,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     private boolean mIsConnected;
     private static int TIMEGAP = 3;
     private LoginActivity mActivity;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -284,7 +282,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             public void onError(Throwable e) {
                 Logger.i(e.getMessage());
                 mRlProgressLogin.setVisibility(View.GONE);
-                UrlAlert("登录失败,网络存在异常");
+                UrlAlert("服务器连接失败");
 
             }
 
@@ -370,15 +368,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         AlertDialog.Builder dialog = new AlertDialog.Builder(LoginActivity.this);
         dialog.setTitle(title);
         dialog.setIcon(getResources().getDrawable(R.drawable.alert_faild_icon));
-        dialog.setMessage("点击确定重新配置网络端口\n点击取消请尝试再次登录\n\n当前网络端口:" + SPUtils.get(GreenRoadApplication.sApplication, SPUtils.CONFIG_PORT, "88"));
+//        dialog.setMessage("点击确定重新配置网络端口\n点击取消请尝试再次登录\n\n当前网络端口:" + SPUtils.get(GreenRoadApplication.sApplication, SPUtils.CONFIG_PORT, "88"));
+        dialog.setMessage("是否启用本地模式，点击确定进入本地模式\n点击取消可重新配置网络端口\n\n当前网络端口:" + SPUtils.get(GreenRoadApplication.sApplication, SPUtils.CONFIG_PORT, "88"));
         dialog.setNegativeButton("取消", (dialogInterface, i) -> {
-            dialogInterface.dismiss();
-        });
-        dialog.setPositiveButton("确定", (dialogInterface, i) -> {
             mEt_user_name.setText("");
             mEt_password.setText("");
             mCheckBox.setChecked(false);
             LineConfigActivity.actionStart(LoginActivity.this, GlobalManager.OTHER2PORT);
+            dialogInterface.dismiss();
+        });
+        dialog.setPositiveButton("确定", (dialogInterface, i) -> {
+            loginFromNotNet(mEt_user_name.getText().toString().trim(), mEt_password.getText().toString().trim());
             dialogInterface.dismiss();
         });
         dialog.show();
