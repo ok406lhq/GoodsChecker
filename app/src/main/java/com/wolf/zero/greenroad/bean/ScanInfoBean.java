@@ -10,9 +10,10 @@ public class ScanInfoBean implements Serializable{
 
     private String scan_05Q;
     private String scan_10Q;
+    private String scan_sWeight;
+    private String scan_sVolume;
+
     private int isLimit;
-
-
 
     public String getScan_05Q() {
         return scan_05Q;
@@ -22,7 +23,16 @@ public class ScanInfoBean implements Serializable{
         this.scan_05Q = scan_05Q;
     }
 
-
+    @Override
+    public String toString() {
+        return "ScanInfoBean{" +
+                "scan_05Q='" + scan_05Q + '\'' +
+                ", scan_10Q='" + scan_10Q + '\'' +
+                ", scan_sWeight='" + scan_sWeight + '\'' +
+                ", scan_sVolume='" + scan_sVolume + '\'' +
+                ", isLimit=" + isLimit +
+                '}';
+    }
 
     public String getScan_10Q() {
         return scan_10Q;
@@ -42,12 +52,20 @@ public class ScanInfoBean implements Serializable{
         this.isLimit = isLimit;
     }
 
-    @Override
-    public String toString() {
-        return "ScanInfoBean{" +
-                ", scan_05Q='" + scan_05Q + '\'' +
-                ", scan_10Q='" + scan_10Q + '\'' +
-                ", isLimit=" + isLimit +
-                '}';
+
+    public String getScan_sWeight() {
+        return scan_sWeight;
+    }
+
+    public void setScan_sWeight(String scan_sWeight) {
+        this.scan_sWeight = scan_sWeight;
+    }
+
+    public String getScan_sVolume() {
+        return scan_sVolume;
+    }
+
+    public void setScan_sVolume(String scan_sVolume) {
+        this.scan_sVolume = scan_sVolume;
     }
 }

@@ -16,7 +16,7 @@ public class SupportGoods extends DataSupport {
     private String imageUrl;
     private String type;
     private int sortId;
-
+    private double density;
 
     @Override
     public String toString() {
@@ -28,9 +28,9 @@ public class SupportGoods extends DataSupport {
                 ", imageUrl='" + imageUrl + '\'' +
                 ", type='" + type + '\'' +
                 ", sortId=" + sortId +
+                ", density=" + density +
                 '}';
     }
-
 
     public String getMarkTime() {
         return markTime;
@@ -86,5 +86,13 @@ public class SupportGoods extends DataSupport {
 
     public void setSortId(int sortId) {
         this.sortId = sortId;
+    }
+
+    public double getDensity() {
+        return density;
+    }
+
+    public void setDensity(double density) {
+        this.density = density;
     }
 }

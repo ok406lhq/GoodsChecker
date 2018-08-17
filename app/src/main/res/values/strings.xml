@@ -77,9 +77,6 @@
     <string name="alphabet_and_point">.0123456789</string>
 
 
-
-
-
     <string name="videoReg">视频识别</string>
     <string name="returnbutlog">返回</string>
     <string name="butclose">退出</string>
@@ -119,7 +116,7 @@
     <string name="editreserved"></string>
     <string name="butset">设置</string>
     <string name="sv"></string>
-    <string name ="no_flash">该设备不支持闪光灯</string>
+    <string name="no_flash">该设备不支持闪光灯</string>
     <string name="butexitlog">退出程序</string>
     <!-- <string name="laterbutlog">稍后激活</string> -->
     <!-- 2012-07-23 新增设置项 -->

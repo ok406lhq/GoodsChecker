@@ -195,7 +195,9 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
 
     private List<SupportGoods> supportGoods;
     private LinkedHashSet supportGoodsSet;
+    private ArrayList<String> goodList;
     private String type;
+    private String good;
 
     //    private List<String> carTypeList = new ArrayList<>();
     private String[] carTypes = {"大卡车", "大卡车B", "大卡车C", "大卡车D", "大卡车E", "大卡车F", "车型A", "车型B", "车型C", "车型D", "车型E", "车型F", "车型G", "车型H"
@@ -523,6 +525,10 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
         ScanFragment.notifyExportChange(export);
     }
 
+    private void notifyScanCarTypeChange(String carType) {
+        ScanFragment.notifyScanCarTypeChange(carType);
+    }
+
     private boolean isBlack(String carNumber, List<SupportBlack> blackList) {
 
         for (int i = 0; i < blackList.size(); i++) {
@@ -838,7 +844,11 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
             public void itemClick(int position) {
                 String title = arrayList.get(position);
                 editText.setText(title);
-                DetailsFragment.this.notifyScanExportChange(title);
+                if (arrayList.toString().contains("车")) {
+                    DetailsFragment.this.notifyScanCarTypeChange(title);
+                } else {
+                    DetailsFragment.this.notifyScanExportChange(title);
+                }
                 mPopupWindow.dismissPopWindow();
             }
         });
@@ -1002,6 +1012,7 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
 
             supportGoodsSet = new LinkedHashSet();
+            goodList = new ArrayList<>();
 
             if (sGoodsBuilder == null) {
                 sGoodsBuilder = new StringBuilder();
@@ -1014,7 +1025,9 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
                     supportGoods = DataSupport.where("name = ?", mGoodsTextList.get(i)).find(SupportGoods.class);
                     if (supportGoods.size() != 0) {
                         type = supportGoods.get(0).getType();
+                        good = supportGoods.get(0).getName();
                         supportGoodsSet.add(type);
+                        goodList.add(good);
                         Log.e("AAAAA", supportGoods.toString());
                     }
                     if (i == mGoodsTextList.size() - 1) {
@@ -1031,8 +1044,10 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
                     Logger.i("mTypeList:" + mTypeList.toString());
                     String goodsType = supportGoodsSet.toString().substring(1, supportGoodsSet.iterator().next().toString().length() + 1);
 //                    Log.e("ABCDE", sGoodsBuilder.toString().split(";")[0] );
+                    String goodsList = goodList.toString().substring(1, goodList.iterator().next().toString().length() + 1);
 
-                    notifyGoodsChange(goodsType);
+//                    notifyGoodsChange(goodsType);
+                    notifyGoodsChange(goodsList);
                 } else {
                     //只选"其他"的情况下
                     notifyGoodsChange("其他");

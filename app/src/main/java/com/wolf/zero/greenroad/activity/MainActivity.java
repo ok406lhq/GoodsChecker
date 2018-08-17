@@ -81,7 +81,7 @@ public class MainActivity extends BaseActivity implements
     RelativeLayout mRlProgressLogin;
     @BindView(R.id.ll_main_contain)
     LinearLayout mLlMainContain;
-//    @BindView(R.id.btn_oc)
+    //    @BindView(R.id.btn_oc)
 //    Button mBtnOc;
     private String mFilePath_str;
     private static final String USERNAME = "username";
@@ -832,8 +832,6 @@ public class MainActivity extends BaseActivity implements
                     dealWithConfigData(goodsBean.getData_config());
                 } else if (code == 203) {
                     Logger.i("数据库货物与配置都没有改变");
-
-
                 }
             }
         };
@@ -918,6 +916,7 @@ public class MainActivity extends BaseActivity implements
             supportGoods.setType(subjectsBeanList.get(i).getType());
             supportGoods.setImageUrl(subjectsBeanList.get(i).getImageUrl());
             supportGoods.setSortId(subjectsBeanList.get(i).getSortId());
+            supportGoods.setDensity(subjectsBeanList.get(i).getDensity());
             supportGoods.save();
         }
 //                    List<SupportGoods> supportGoodsList = DataSupport.findAll(SupportGoods.class);
@@ -965,6 +964,7 @@ public class MainActivity extends BaseActivity implements
                     localGoods.setPinyin(supportGoods.get(j).getPinyin());
                     localGoods.setSortId(supportGoods.get(j).getSortId());
                     localGoods.setType(supportGoods.get(j).getType());
+                    localGoods.setDensity(supportGoods.get(j).getDensity());
                     localGoods.save();
                 }
             }

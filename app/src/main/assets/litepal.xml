@@ -5,7 +5,7 @@
 
 
     <!--<version value="8" />-->
-    <version value="2" />
+    <version value="3" />
 
     <list>
         <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLoginInfo" />

@@ -85,7 +85,7 @@ public class ShowActivity extends BaseActivity {
 
 
     private static CheckedBean mCheckedBean_Q;
-//    private static String mStation_Q;
+    //    private static String mStation_Q;
 //    private static String mRoad_Q;
     private Handler mUiHandler = new Handler();
     private static List<LocalMedia> mLocalMedias_sanzheng_Q;
@@ -212,7 +212,6 @@ public class ShowActivity extends BaseActivity {
                 mFabDraft.hideButtonInMenu(true);
                 mFabSubmit.hideButtonInMenu(true);
                 mMenuFab.toggle(false);
-                Logger.i(DetailsFragment.sEnterType);
 
                 DetailsFragment.setDetailsConnectListener((bean) -> {
                     mDetailInfoBean_Q = bean;
@@ -332,7 +331,6 @@ public class ShowActivity extends BaseActivity {
                 mFabDraft.hideButtonInMenu(true);
                 mFabSubmit.hideButtonInMenu(true);
                 mMenuFab.toggle(false);
-                Logger.i(DetailsFragment.sEnterType);
                 saveDraft(0);
                 break;
 

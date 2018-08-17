@@ -153,6 +153,7 @@ public class HttpResultGoods {
             private String pinyin;
             private String imageUrl;
             private String type;
+            private double density;
             private int sortId;
 
             public String getName() {
@@ -193,6 +194,14 @@ public class HttpResultGoods {
 
             public void setSortId(int sortId) {
                 this.sortId = sortId;
+            }
+
+            public double getDensity() {
+                return density;
+            }
+
+            public void setDensity(double density) {
+                this.density = density;
             }
         }
     }

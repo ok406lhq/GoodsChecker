@@ -12,18 +12,19 @@ public class SupportLocalGoods extends DataSupport {
     private String imageUrl;
     private String type;
     private int sortId;
+    private double density;
 
     @Override
     public String toString() {
         return "SupportLocalGoods{" +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", pinyin='" + pinyin + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", type='" + type + '\'' +
                 ", sortId=" + sortId +
+                ", density=" + density +
                 '}';
     }
-
 
     public String getName() {
         return name;
@@ -63,5 +64,13 @@ public class SupportLocalGoods extends DataSupport {
 
     public void setSortId(int sortId) {
         this.sortId = sortId;
+    }
+
+    public void setDensity(double density) {
+        this.density = density;
+    }
+
+    public double getDensity() {
+        return density;
     }
 }

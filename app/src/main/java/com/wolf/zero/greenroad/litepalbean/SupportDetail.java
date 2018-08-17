@@ -15,7 +15,6 @@ public class SupportDetail extends DataSupport implements Parcelable{
 
     private int lite_ID;
 
-
     private String station;
     private String lane;
     private String road;
