@@ -49,7 +49,7 @@ public class CheckActivity extends AppCompatActivity {
         double deviation = bundle.getDouble("deviation");
 
         mTvStandardWeight.setText(Double.toString(standardWeight));
-        mTvDeviation.setText(Double.toString(index * 100) + "%");
+        mTvDeviation.setText(Integer.toString((int) (index * 100)) + "%");
         mtvMoreWeight.setText(Double.toString(deviation) + "吨   ");
         if (Math.abs(index) > 0.3) {
             mIsOverWeight.setText("超重了");

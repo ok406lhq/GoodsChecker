@@ -126,6 +126,10 @@ public class ScanFragment extends Fragment {
                     ToastUtils.singleToast("请输入称重质量");
                 } else if (t2.isEmpty()) {
                     ToastUtils.singleToast("请输入货物名称");
+                } else if (et1.isEmpty()) {
+                    ToastUtils.singleToast("请输入自重");
+                } else if (et2.isEmpty()) {
+                    ToastUtils.singleToast("请输入容积");
                 } else {
                     supportGoods = DataSupport.where("name = ?", mText_table_5.getText().toString()).find(SupportGoods.class);
                     Intent intent = new Intent(getActivity(), CheckActivity.class);
@@ -133,16 +137,23 @@ public class ScanFragment extends Fragment {
                     double sWeight = Double.valueOf(et1);
                     //货物容积
                     double sVolume = Double.valueOf(et2);
+                    //货物称重
+                    double gWeight = Double.valueOf(t1);
                     //货物密度
                     double density = supportGoods.get(0).getDensity();
                     //货物重量=称重-自重
-                    double weight = Double.valueOf(t1) - sWeight;
+                    double weight = gWeight - sWeight;
                     //标准重量=容积*货物标准密度
                     double standardWeight = sVolume * density;
                     //重量偏差=货物重量-标准质量
                     double deviation = weight - standardWeight;
                     //结果指数=重量偏差/标准重量
                     double index = deviation / standardWeight;
+
+                    if (sWeight > gWeight) {//自重大于称重时，有误需要提醒
+                        ToastUtils.singleToast("货车自重不能大于货物称重，请重新输入");
+                        return;
+                    }
 
                     if (Math.abs(index) > 0.3) {
                         mToggleIsLimit.setChecked(false);
@@ -158,6 +169,7 @@ public class ScanFragment extends Fragment {
                     Bundle bundle = new Bundle();
                     bundle.putDouble("standardWeight", getTwoDecimal(standardWeight));
                     bundle.putDouble("index", getTwoDecimal(index));
+                    Logger.d("hzmd" + getTwoDecimal(index));
                     bundle.putDouble("deviation", getTwoDecimal(deviation));
                     intent.putExtras(bundle);
                     startActivity(intent);
@@ -173,7 +185,7 @@ public class ScanFragment extends Fragment {
      * 将数据保留两位小数
      */
     private double getTwoDecimal(double num) {
-        DecimalFormat dFormat = new DecimalFormat("#.00");
+        DecimalFormat dFormat = new DecimalFormat(".##");
         String yearString = dFormat.format(num);
         Double temp = Double.valueOf(yearString);
         return temp;
