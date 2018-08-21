@@ -91,8 +91,16 @@
         <TextView
             android:id="@+id/tv_showIsOverWeight"
             android:layout_width="wrap_content"
-            android:text="123"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:text="123" />
     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
 </LinearLayout>

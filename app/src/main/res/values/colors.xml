@@ -31,7 +31,7 @@
     <color name="login_bg_white">#ececec</color>
     <color name="login_bg_white_translate">#89ececec</color>
 
-
+    <color name="transparent_gray">#90000000</color>
     <color name="setting_bg_text_item">#7dafd1e1</color>
     <!--自定义输入法的按键背景样式-->
     <color name="key_bg_night">#5c5c5c</color>

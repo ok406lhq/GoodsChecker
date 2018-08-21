@@ -88,4 +88,5 @@ dependencies {
     implementation 'com.loopeer.library:itemtouchhelperextension:1.0.5'
     implementation project(path: ':ocrplateidlibrary')
     implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }
