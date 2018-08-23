@@ -12,6 +12,7 @@ import com.wolf.zero.greenroad.httpresultbean.HttpResultLineStation;
 import com.wolf.zero.greenroad.httpresultbean.HttpResultLoginName;
 import com.wolf.zero.greenroad.httpresultbean.HttpResultMacInfo;
 import com.wolf.zero.greenroad.httpresultbean.HttpResultPolling;
+import com.wolf.zero.greenroad.httpresultbean.HttpResultWeight;
 
 import java.util.List;
 
@@ -42,16 +43,16 @@ public interface HttpUtilsApi {
     @POST("Login/listapi")
     Call<HttpResultLoginName> login(@Field("name") String name, @Field("password") String password);
 
-   @GET("Apiversion/update")
-   Observable<UpdateAppInfo> update(
-           @Query("appversion") String appversion);
+    @GET("Apiversion/update")
+    Observable<UpdateAppInfo> update(
+            @Query("appversion") String appversion);
 //            @Query("appname") String appname,
 
 
-//    @FormUrlEncoded
+    //    @FormUrlEncoded
 //    @POST("Api/polling")
 //    Observable<HttpResultPolling> polling(@Field("polling") int[] pollingList);
- @FormUrlEncoded
+    @FormUrlEncoded
     @POST("Api/polling")
     Observable<HttpResultPolling> polling(@Field("polling") String pollingList);
 
@@ -83,7 +84,6 @@ public interface HttpUtilsApi {
             @Field("login_psw") String psw
     );
 
-
     @GET("Api/black")
     Observable<HttpResultBlack<List<HttpResultBlack.DataBean>>> getBlack();
 
@@ -114,12 +114,15 @@ public interface HttpUtilsApi {
     Observable<HttpResultGoods> postGoods(@Field("markTime") String markTime, @Field("markTime_config") String markTime_config);
 //    start=0&count=10
 
+    @FormUrlEncoded
+    @POST("Api/weight_time")
+    Observable<HttpResultWeight> getWeightTime(@Field("plate_number") String plateNumber);
 
-//   @FormUrlEncoded
-   @GET("FirstServlet")
-   Observable<HttpResultPolling> doPost();
+    //   @FormUrlEncoded
+    @GET("FirstServlet")
+    Observable<HttpResultPolling> doPost();
 
-   @GET("Api/signal")
+    @GET("Api/signal")
     Observable<HttpResultCode> postSignal();
 //   Observable<HttpResultPolling> doPost(@Field("id") String id);
 //

@@ -1,8 +1,14 @@
 package com.wolf.zero.greenroad.bean;
 
-public class GoodsChartBean {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class GoodsChartBean{
     private String date;
     private double weight;
+
+
+
 
     public String getDate() {
         return date;
@@ -22,7 +28,9 @@ public class GoodsChartBean {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
+
+
 }

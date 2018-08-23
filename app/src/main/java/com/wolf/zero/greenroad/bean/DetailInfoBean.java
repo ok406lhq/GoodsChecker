@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Administrator on 2017/8/14.
  */
 
-public class DetailInfoBean{
+public class DetailInfoBean {
     private String number;
     private String goods;
     private String text_weight;

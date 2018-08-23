@@ -23,12 +23,13 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.utils.MPPointF;
+import com.orhanobut.logger.Logger;
 import com.wolf.zero.greenroad.R;
 import com.wolf.zero.greenroad.bean.GoodsChartBean;
+import com.wolf.zero.greenroad.tools.DateUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CheckActivity extends AppCompatActivity {
@@ -44,6 +45,7 @@ public class CheckActivity extends AppCompatActivity {
     private ArrayList<GoodsChartBean> list;
 
     private LineChart lineChart;
+    private ArrayList<String> chartList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,22 +57,31 @@ public class CheckActivity extends AppCompatActivity {
         getWindow().setAttributes(params);
         setContentView(R.layout.activity_check);
 
-        initData();
         initView();
+
     }
 
-    private void initData() {
+    private void initChartData() {
         list = new ArrayList<>();
-        list.add(new GoodsChartBean("20180811", 35.5));
-        list.add(new GoodsChartBean("20180812", 31.5));
-        list.add(new GoodsChartBean("20180813", 32.5));
-        list.add(new GoodsChartBean("20180814", 33.5));
-        list.add(new GoodsChartBean("20180815", 34.5));
-        list.add(new GoodsChartBean("20180816", 35.5));
-        list.add(new GoodsChartBean("20180817", 36.5));
-        list.add(new GoodsChartBean("20180818", 37.5));
-        list.add(new GoodsChartBean("20180819", 38.5));
-        list.add(new GoodsChartBean("20180820", 39.5));
+        if (chartList.isEmpty()) {
+            list.add(new GoodsChartBean("", 0.0));
+        } else {
+            for (int i = 0; i < chartList.size(); i++) {
+                String[] split = chartList.get(i).split("[:]");
+                com.orhanobut.logger.Logger.d(split[0] + "gray" + split[1]);
+                list.add(new GoodsChartBean(split[0], Double.valueOf(split[1])));
+            }
+        }
+//        list.add(new GoodsChartBean("20180811", 35.5));
+//        list.add(new GoodsChartBean("20180812", 31.5));
+//        list.add(new GoodsChartBean("20180813", 32.5));
+//        list.add(new GoodsChartBean("20180814", 33.5));
+//        list.add(new GoodsChartBean("20180815", 34.5));
+//        list.add(new GoodsChartBean("20180816", 35.5));
+//        list.add(new GoodsChartBean("20180817", 36.5));
+//        list.add(new GoodsChartBean("20180818", 37.5));
+//        list.add(new GoodsChartBean("20180819", 38.5));
+//        list.add(new GoodsChartBean("20180820", 39.5));
     }
 
     private void initView() {
@@ -82,14 +93,13 @@ public class CheckActivity extends AppCompatActivity {
         mCheck2 = (TextView) findViewById(R.id.tv_check2);
         mCheck3 = (TextView) findViewById(R.id.tv_check3);
 
-        lineChart = (LineChart) findViewById(R.id.lineChart);
-        initLineChart(list);
-
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         double standardWeight = bundle.getDouble("standardWeight");
         double index = bundle.getDouble("index");
         double deviation = bundle.getDouble("deviation");
+        chartList = bundle.getStringArrayList("chartList");
+        Logger.d(chartList + "chartList");
 
         mTvStandardWeight.setText(Double.toString(standardWeight));
         mTvDeviation.setText(Integer.toString((int) (index * 100)) + "%");
@@ -127,6 +137,10 @@ public class CheckActivity extends AppCompatActivity {
 //            }
 //        });
 
+        lineChart = (LineChart) findViewById(R.id.lineChart);
+        initChartData();
+        initLineChart(list);
+
     }
 
     private void initLineChart(ArrayList<GoodsChartBean> list) {
@@ -146,7 +160,7 @@ public class CheckActivity extends AppCompatActivity {
         //线宽度
         lineDataSet.setLineWidth(1.6f);
         //不显示圆点
-        lineDataSet.setDrawCircles(false);
+        lineDataSet.setDrawCircles(true);
         //线条平滑
         lineDataSet.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         //设置折线图填充
@@ -163,10 +177,12 @@ public class CheckActivity extends AppCompatActivity {
         //设置X轴坐标之间的最小间隔
         xAxis.setGranularity(1f);
         //设置X轴的刻度数量，第二个参数为true,将会画出明确数量（带有小数点），但是可能值导致不均匀，默认（6，false）
-        xAxis.setLabelCount(list.size() / 2, false);
+        //也就是设置x轴的间距值
+        xAxis.setLabelCount(6, false);
         //设置X轴的值（最小值、最大值、然后会根据设置的刻度数量自动分配刻度显示）
         xAxis.setAxisMinimum(0f);
-        xAxis.setAxisMaximum((float) list.size());
+        xAxis.setXOffset(-3);
+        xAxis.setAxisMaximum((float) list.size() - 1);
         //不显示网格线
         xAxis.setDrawGridLines(false);
         // 标签倾斜
@@ -175,10 +191,9 @@ public class CheckActivity extends AppCompatActivity {
         xAxis.setValueFormatter(new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {
-                int IValue = (int) value;
-                CharSequence format = DateFormat.format("MM/dd",
-                        System.currentTimeMillis() - (long) (list.size() - IValue) * 24 * 60 * 60 * 1000);
-                return format.toString();
+                String date = list.get((int) value % list.size()).getDate();
+                return DateUtil.formatDateToMd(date);
+//                return format.toString();
             }
         });
         //得到Y轴
@@ -216,7 +231,7 @@ public class CheckActivity extends AppCompatActivity {
         description.setEnabled(false);
         lineChart.setDescription(description);
         //折线图点的标记
-        MyMarkerView mv = new MyMarkerView(this);
+        MyMarkerView mv = new MyMarkerView(this, xAxis.getValueFormatter());
         lineChart.setMarker(mv);
         //设置数据
         lineChart.setData(data);
@@ -227,17 +242,26 @@ public class CheckActivity extends AppCompatActivity {
     private class MyMarkerView extends MarkerView {
         private TextView tvContent;
         private DecimalFormat format = new DecimalFormat("##0");
+        private IAxisValueFormatter iAxisValueFormatter;
 
-        public MyMarkerView(Context context) {
+        public MyMarkerView(Context context, IAxisValueFormatter iAxisValueFormatter) {
             super(context, R.layout.layout_markerview);//这个布局自己定义
             tvContent = (TextView) findViewById(R.id.tv_value0);
+
+            this.iAxisValueFormatter = iAxisValueFormatter;
         }
 
         //显示的内容
         @Override
         public void refreshContent(Entry e, Highlight highlight) {
-            tvContent.setText(format(e.getX()) + "\n" + (e.getY()) + "吨");
-            super.refreshContent(e, highlight);
+//            tvContent.setText(format(e.getX()) + "\n" + (e.getY()) + "吨");
+            if (e.getY() == 0.0) {
+                tvContent.setText("暂无该车牌近10天的数据");
+                super.refreshContent(e, highlight);
+            } else {
+                tvContent.setText(iAxisValueFormatter.getFormattedValue(e.getX(), null) + "\n" + (e.getY()) + "吨");
+                super.refreshContent(e, highlight);
+            }
         }
 
         //标记相对于折线图的偏移量
@@ -248,8 +272,9 @@ public class CheckActivity extends AppCompatActivity {
 
         //时间格式化（显示今日往前30天的每一天日期）
         public String format(float x) {
+            Logger.d(x + "xxx");
             CharSequence format = DateFormat.format("MM月dd日",
-                    System.currentTimeMillis() - (long) (30 - (int) x) * 24 * 60 * 60 * 1000);
+                    System.currentTimeMillis());
             return format.toString();
         }
 

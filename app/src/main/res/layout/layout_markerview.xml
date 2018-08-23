@@ -6,26 +6,13 @@
     android:orientation="vertical">
 
     <TextView
-        android:textSize="10dp"
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white" />
-
-    <TextView
         android:id="@+id/tv_value0"
-        android:textSize="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="10dp" />
 
-    <TextView
-        android:textSize="10dp"
-        android:id="@+id/tv_value1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white" />
 
 </LinearLayout>

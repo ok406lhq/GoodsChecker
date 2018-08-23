@@ -7,7 +7,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -15,10 +14,12 @@ import android.widget.ToggleButton;
 import com.orhanobut.logger.Logger;
 import com.wolf.zero.greenroad.R;
 import com.wolf.zero.greenroad.SpinnerPopupWindow;
-import com.wolf.zero.greenroad.activity.AboutActivity;
 import com.wolf.zero.greenroad.activity.CheckActivity;
 import com.wolf.zero.greenroad.adapter.SpinnerAdapter;
+import com.wolf.zero.greenroad.bean.GoodsChartBean;
 import com.wolf.zero.greenroad.bean.ScanInfoBean;
+import com.wolf.zero.greenroad.httpresultbean.HttpResultWeight;
+import com.wolf.zero.greenroad.https.RequestWeight;
 import com.wolf.zero.greenroad.litepalbean.SupportCarTypeAndConfig;
 import com.wolf.zero.greenroad.litepalbean.SupportDetail;
 import com.wolf.zero.greenroad.litepalbean.SupportGoods;
@@ -35,8 +36,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
+import rx.Subscriber;
 
 public class ScanFragment extends Fragment {
 
@@ -63,6 +64,7 @@ public class ScanFragment extends Fragment {
     private static String enterType;
 
     private List<SupportGoods> supportGoods;
+    private ArrayList<String> chartList;
 
     private EditText[] mEditTextsScan;
     private int mThemeTag;
@@ -150,6 +152,8 @@ public class ScanFragment extends Fragment {
                     //结果指数=重量偏差/标准重量
                     double index = deviation / standardWeight;
 
+                    chartList = new ArrayList<>();
+
                     if (sWeight > gWeight) {//自重大于称重时，有误需要提醒
                         ToastUtils.singleToast("货车自重不能大于货物称重，请重新输入");
                         return;
@@ -160,19 +164,59 @@ public class ScanFragment extends Fragment {
                     } else {
                         mToggleIsLimit.setChecked(true);
                     }
+
+                    Bundle bundle = new Bundle();
+//                    bundle.putStringArrayList("chartList", chartList);
+                    bundle.putDouble("standardWeight", getTwoDecimal(standardWeight));
+                    bundle.putDouble("index", getTwoDecimal(index));
+                    Logger.d("hzmd" + getTwoDecimal(index));
+                    bundle.putDouble("deviation", getTwoDecimal(deviation));
+
+                    RequestWeight.getInstance().getWeightTime(new Subscriber<HttpResultWeight>() {
+                        @Override
+                        public void onCompleted() {
+                            bundle.putStringArrayList("chartList", chartList);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            Logger.i("完成");
+
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            Logger.i("错误" + e.getMessage());
+                            bundle.putStringArrayList("chartList", chartList);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onNext(HttpResultWeight dataBeans) {
+                            Logger.d(dataBeans + "lhqqqq");
+                            Logger.d(dataBeans.getData().getWeight_time().size() + "lhqq");
+                            Logger.d(dataBeans.getData().getWeight_time().get(0).getDate() + ":" +
+                                    dataBeans.getData().getWeight_time().get(0).getWeight());
+                            for (int i = 0; i < dataBeans.getData().getWeight_time().size(); i++) {
+                                chartList.add(dataBeans.getData().getWeight_time().get(i).getDate() + ":" +
+                                        dataBeans.getData().getWeight_time().get(i).getWeight());
+                                Logger.d(dataBeans.getData().getWeight_time().get(i).getDate() + "z:z" +
+                                        dataBeans.getData().getWeight_time().get(i).getWeight());
+                            }
+
+//                            Logger.d(dataBeans.get(0).getWeight_time() + "lhqqqq");
+//                            for (int i = 0; i < dataBeans.size(); i++) {
+//                                Logger.d(dataBeans.get(i).getWeight_time());
+//                            }
+                        }
+                    }, mText_table_1.getText().toString());
 //                    if (sWeight > sVolume) {
 //                        mToggleIsLimit.setChecked(false);
 //                    } else {
 //                        mToggleIsLimit.setChecked(true);
 //                    }
 //                callBack.setTexts(sWeight, sVolume);
-                    Bundle bundle = new Bundle();
-                    bundle.putDouble("standardWeight", getTwoDecimal(standardWeight));
-                    bundle.putDouble("index", getTwoDecimal(index));
-                    Logger.d("hzmd" + getTwoDecimal(index));
-                    bundle.putDouble("deviation", getTwoDecimal(deviation));
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+
+
                 }
             }
         });
@@ -180,6 +224,7 @@ public class ScanFragment extends Fragment {
         initView(view);
         return view;
     }
+
 
     /**
      * 将数据保留两位小数
