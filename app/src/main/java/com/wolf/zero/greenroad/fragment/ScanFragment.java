@@ -186,6 +186,7 @@ public class ScanFragment extends Fragment {
                         public void onError(Throwable e) {
                             Logger.i("错误" + e.getMessage());
                             bundle.putStringArrayList("chartList", chartList);
+
                             intent.putExtras(bundle);
                             startActivity(intent);
                         }

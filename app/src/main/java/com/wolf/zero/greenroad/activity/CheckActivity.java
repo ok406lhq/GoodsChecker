@@ -72,16 +72,6 @@ public class CheckActivity extends AppCompatActivity {
                 list.add(new GoodsChartBean(split[0], Double.valueOf(split[1])));
             }
         }
-//        list.add(new GoodsChartBean("20180811", 35.5));
-//        list.add(new GoodsChartBean("20180812", 31.5));
-//        list.add(new GoodsChartBean("20180813", 32.5));
-//        list.add(new GoodsChartBean("20180814", 33.5));
-//        list.add(new GoodsChartBean("20180815", 34.5));
-//        list.add(new GoodsChartBean("20180816", 35.5));
-//        list.add(new GoodsChartBean("20180817", 36.5));
-//        list.add(new GoodsChartBean("20180818", 37.5));
-//        list.add(new GoodsChartBean("20180819", 38.5));
-//        list.add(new GoodsChartBean("20180820", 39.5));
     }
 
     private void initView() {
@@ -123,19 +113,6 @@ public class CheckActivity extends AppCompatActivity {
             mCheck2.setTextColor(Color.rgb(45, 228, 32));
             mCheck3.setTextColor(Color.rgb(45, 228, 32));
         }
-//        double sWeight = Double.valueOf(getIntent().getExtras().getString("sWeight"));
-//        double sVolume = Double.valueOf(getIntent().getExtras().getString("sVolume"));
-//        double sWeight = 11.0;
-//        double sVolume = 23.1;
-//        ScanFragment fragment = ScanFragment.newInstance(GlobalManager.TYPE_MAIN_ENTER_SHOW);
-//        fragment.setCallBack(new ScanFragment.CallBack() {
-//            @Override
-//            public void setTexts(String sWeight, String sVolume) {
-//                mtvMoreWeight.setText(Double.toString((Double.valueOf(sVolume) - Double.valueOf(sWeight))));
-//                mTvDeviation.setText(Double.toString((Double.valueOf(sVolume) / Double.valueOf(sWeight))));
-//                mtvMoreWeight.setText(Double.toString((Double.valueOf(sVolume) + Double.valueOf(sWeight))));
-//            }
-//        });
 
         lineChart = (LineChart) findViewById(R.id.lineChart);
         initChartData();
@@ -181,7 +158,7 @@ public class CheckActivity extends AppCompatActivity {
         xAxis.setLabelCount(6, false);
         //设置X轴的值（最小值、最大值、然后会根据设置的刻度数量自动分配刻度显示）
         xAxis.setAxisMinimum(0f);
-        xAxis.setXOffset(-3);
+//        xAxis.setXOffset(-3);
         xAxis.setAxisMaximum((float) list.size() - 1);
         //不显示网格线
         xAxis.setDrawGridLines(false);
@@ -254,7 +231,8 @@ public class CheckActivity extends AppCompatActivity {
         //显示的内容
         @Override
         public void refreshContent(Entry e, Highlight highlight) {
-//            tvContent.setText(format(e.getX()) + "\n" + (e.getY()) + "吨");
+//            tvContent.setText(format(e.getX()) + "\n"
+// + (e.getY()) + "吨");
             if (e.getY() == 0.0) {
                 tvContent.setText("暂无该车牌近10天的数据");
                 super.refreshContent(e, highlight);
