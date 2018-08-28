@@ -143,6 +143,10 @@ public class ScanFragment extends Fragment {
                     double gWeight = Double.valueOf(t1);
                     //货物密度
                     double density = supportGoods.get(0).getDensity();
+                    if (density == 0.0) {
+                        ToastUtils.singleToast("暂未录入该货物数据，请校准");
+                        return;
+                    }
                     //货物重量=称重-自重
                     double weight = gWeight - sWeight;
                     //标准重量=容积*货物标准密度

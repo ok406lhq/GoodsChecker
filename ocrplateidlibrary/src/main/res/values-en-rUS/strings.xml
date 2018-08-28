@@ -6,7 +6,7 @@
     <string name="butclose">exit</string>
     <string name="hello"></string>
     <string name="app_name">Eparking plate</string>
-    <string name="company_name">Beijing Yi Bo Technology Co.</string>
+    <string name="company_name">Shenzhen Huatiancheng Technology Co., Ltd.</string>
     <string name="textnMinPlateWidth">Detection of the min plate width</string>
     <string name="editnMinPlateWidth">80</string>
     <string name="textnMaxPlateWidth">Detection of the max plate width</string>
@@ -41,7 +41,7 @@
     <string name="editreserved"></string>
     <string name="butset">Setting</string>
     <string name="sv"></string>
-    <string name ="no_flash">This device does not support flash</string>
+    <string name="no_flash">This device does not support flash</string>
     <string name="butexitlog">Exit</string>
     <!-- <string name="laterbutlog">Activate later</string> -->
     <!-- 2012-07-23 新增设置项 -->
@@ -159,6 +159,6 @@
     <string name="selectRecgnoize">选择识别</string>
     <string name="realtime">预览识别</string>
     <string name="beginstring">开始自动识别</string>
-    
+
 
 </resources>
