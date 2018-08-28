@@ -134,6 +134,8 @@ public class ScanFragment extends Fragment {
                     ToastUtils.singleToast("请输入容积");
                 } else if (Double.valueOf(et2) == 0) {
                     ToastUtils.singleToast("容积不能为0");
+                } else if (Double.valueOf(et1) == 0) {
+                    ToastUtils.singleToast("自重不能为0");
                 } else {
                     supportGoods = DataSupport.where("name = ?", mText_table_5.getText().toString()).find(SupportGoods.class);
                     Intent intent = new Intent(getActivity(), CheckActivity.class);
