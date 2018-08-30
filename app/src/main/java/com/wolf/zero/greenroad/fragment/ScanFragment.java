@@ -179,6 +179,7 @@ public class ScanFragment extends Fragment {
                     bundle.putDouble("index", getTwoDecimal(index));
                     Logger.d("hzmd" + getTwoDecimal(index));
                     bundle.putDouble("deviation", getTwoDecimal(deviation));
+                    bundle.putBoolean("isShowRecord", false);
 
                     RequestWeight.getInstance().getWeightTime(new Subscriber<HttpResultWeight>() {
                         @Override
@@ -187,7 +188,6 @@ public class ScanFragment extends Fragment {
                             intent.putExtras(bundle);
                             startActivity(intent);
                             Logger.i("完成");
-
                         }
 
                         @Override
@@ -228,6 +228,75 @@ public class ScanFragment extends Fragment {
 
                 }
             }
+        });
+
+        view.findViewById(R.id.btn_record).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String t1 = mText_table_4.getText().toString();
+                String t2 = mText_table_5.getText().toString();
+                String et1 = et_table1.getText().toString();
+                String et2 = et_table2.getText().toString();
+
+                Intent intent = new Intent(getActivity(), CheckActivity.class);
+
+
+                chartList = new ArrayList<>();
+
+                Bundle bundle = new Bundle();
+//                    bundle.putStringArrayList("chartList", chartList);
+                bundle.putDouble("standardWeight", 1.0);
+                bundle.putDouble("index", 1.0);
+                bundle.putDouble("deviation", 1.0);
+                bundle.putBoolean("isShowRecord", true);
+
+                RequestWeight.getInstance().getWeightTime(new Subscriber<HttpResultWeight>() {
+                    @Override
+                    public void onCompleted() {
+                        bundle.putStringArrayList("chartList", chartList);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                        Logger.i("完成");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.i("错误" + e.getMessage());
+                        bundle.putStringArrayList("chartList", chartList);
+
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onNext(HttpResultWeight dataBeans) {
+                        Logger.d(dataBeans + "lhqqqq");
+                        Logger.d(dataBeans.getData().getWeight_time().size() + "lhqq");
+                        Logger.d(dataBeans.getData().getWeight_time().get(0).getDate() + ":" +
+                                dataBeans.getData().getWeight_time().get(0).getWeight());
+                        for (int i = 0; i < dataBeans.getData().getWeight_time().size(); i++) {
+                            chartList.add(dataBeans.getData().getWeight_time().get(i).getDate() + ":" +
+                                    dataBeans.getData().getWeight_time().get(i).getWeight());
+                            Logger.d(dataBeans.getData().getWeight_time().get(i).getDate() + "z:z" +
+                                    dataBeans.getData().getWeight_time().get(i).getWeight());
+                        }
+
+//                            Logger.d(dataBeans.get(0).getWeight_time() + "lhqqqq");
+//                            for (int i = 0; i < dataBeans.size(); i++) {
+//                                Logger.d(dataBeans.get(i).getWeight_time());
+//                            }
+                    }
+                }, mText_table_1.getText().toString());
+//                    if (sWeight > sVolume) {
+//                        mToggleIsLimit.setChecked(false);
+//                    } else {
+//                        mToggleIsLimit.setChecked(true);
+//                    }
+//                callBack.setTexts(sWeight, sVolume);
+
+
+            }
+
         });
 
         initView(view);

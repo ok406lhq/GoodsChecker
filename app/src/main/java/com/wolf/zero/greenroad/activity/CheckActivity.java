@@ -1,13 +1,16 @@
 package com.wolf.zero.greenroad.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -41,6 +44,9 @@ public class CheckActivity extends AppCompatActivity {
     private TextView mCheck1;
     private TextView mCheck2;
     private TextView mCheck3;
+    private LinearLayout ll1;
+    private LinearLayout ll2;
+    private LinearLayout ll3;
 
     private ArrayList<GoodsChartBean> list;
 
@@ -74,6 +80,7 @@ public class CheckActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("CutPasteId")
     private void initView() {
         mTvStandardWeight = (TextView) findViewById(R.id.tv_standardWeight);
         mTvDeviation = (TextView) findViewById(R.id.tv_deviation);
@@ -82,42 +89,60 @@ public class CheckActivity extends AppCompatActivity {
         mCheck1 = (TextView) findViewById(R.id.tv_check1);
         mCheck2 = (TextView) findViewById(R.id.tv_check2);
         mCheck3 = (TextView) findViewById(R.id.tv_check3);
+        ll1 = (LinearLayout) findViewById(R.id.ll_1);
+        ll2 = (LinearLayout) findViewById(R.id.ll_1);
+        ll3 = (LinearLayout) findViewById(R.id.ll_1);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        double standardWeight = bundle.getDouble("standardWeight");
-        double index = bundle.getDouble("index");
-        double deviation = bundle.getDouble("deviation");
         chartList = bundle.getStringArrayList("chartList");
-        Logger.d(chartList + "chartList");
+        if (!bundle.getBoolean("isShowRecord")) {
+            double standardWeight = bundle.getDouble("standardWeight");
+            double index = bundle.getDouble("index");
+            double deviation = bundle.getDouble("deviation");
 
-        mTvStandardWeight.setText(Double.toString(standardWeight));
-        mTvDeviation.setText(Integer.toString((int) (index * 100)) + "%");
-        mtvMoreWeight.setText(Double.toString(deviation) + "吨   ");
-        if (Math.abs(index) > 0.3) {
-            mIsOverWeight.setText("超重了");
-            mTvStandardWeight.setTextColor(Color.rgb(255, 0, 0));
-            mTvDeviation.setTextColor(Color.rgb(255, 0, 0));
-            mtvMoreWeight.setTextColor(Color.rgb(255, 0, 0));
-            mIsOverWeight.setTextColor(Color.rgb(255, 0, 0));
-            mCheck1.setTextColor(Color.rgb(255, 0, 0));
-            mCheck2.setTextColor(Color.rgb(255, 0, 0));
-            mCheck3.setTextColor(Color.rgb(255, 0, 0));
+            Logger.d(chartList + "chartList");
+
+            mTvStandardWeight.setText(Double.toString(standardWeight));
+            mTvDeviation.setText(Integer.toString((int) (index * 100)) + "%");
+            mtvMoreWeight.setText(Double.toString(deviation) + "吨   ");
+            if (Math.abs(index) > 0.3) {
+                mIsOverWeight.setText("超出标准范围");
+                mTvStandardWeight.setTextColor(Color.rgb(255, 0, 0));
+                mTvDeviation.setTextColor(Color.rgb(255, 0, 0));
+                mtvMoreWeight.setTextColor(Color.rgb(255, 0, 0));
+                mIsOverWeight.setTextColor(Color.rgb(255, 0, 0));
+                mCheck1.setTextColor(Color.rgb(255, 0, 0));
+                mCheck2.setTextColor(Color.rgb(255, 0, 0));
+                mCheck3.setTextColor(Color.rgb(255, 0, 0));
+            } else {
+                mIsOverWeight.setText("标准范围内");
+                mTvStandardWeight.setTextColor(Color.rgb(45, 228, 32));
+                mTvDeviation.setTextColor(Color.rgb(45, 228, 32));
+                mtvMoreWeight.setTextColor(Color.rgb(45, 228, 32));
+                mIsOverWeight.setTextColor(Color.rgb(45, 228, 32));
+                mCheck1.setTextColor(Color.rgb(45, 228, 32));
+                mCheck2.setTextColor(Color.rgb(45, 228, 32));
+                mCheck3.setTextColor(Color.rgb(45, 228, 32));
+            }
+
+            lineChart = (LineChart) findViewById(R.id.lineChart);
+            initChartData();
+            initLineChart(list);
         } else {
-            mIsOverWeight.setText("标准范围内");
-            mTvStandardWeight.setTextColor(Color.rgb(45, 228, 32));
-            mTvDeviation.setTextColor(Color.rgb(45, 228, 32));
-            mtvMoreWeight.setTextColor(Color.rgb(45, 228, 32));
-            mIsOverWeight.setTextColor(Color.rgb(45, 228, 32));
-            mCheck1.setTextColor(Color.rgb(45, 228, 32));
-            mCheck2.setTextColor(Color.rgb(45, 228, 32));
-            mCheck3.setTextColor(Color.rgb(45, 228, 32));
+            mIsOverWeight.setVisibility(View.GONE);
+            mTvStandardWeight.setVisibility(View.GONE);
+            mTvDeviation.setVisibility(View.GONE);
+            mtvMoreWeight.setVisibility(View.GONE);
+            mCheck1.setVisibility(View.GONE);
+            mCheck2.setVisibility(View.GONE);
+            mCheck3.setVisibility(View.GONE);
+
+            Logger.d("sss" + chartList.toString());
+            lineChart = (LineChart) findViewById(R.id.lineChart);
+            initChartData();
+            initLineChart(list);
         }
-
-        lineChart = (LineChart) findViewById(R.id.lineChart);
-        initChartData();
-        initLineChart(list);
-
     }
 
     private void initLineChart(ArrayList<GoodsChartBean> list) {
@@ -155,7 +180,7 @@ public class CheckActivity extends AppCompatActivity {
         xAxis.setGranularity(1f);
         //设置X轴的刻度数量，第二个参数为true,将会画出明确数量（带有小数点），但是可能值导致不均匀，默认（6，false）
         //也就是设置x轴的间距值
-        xAxis.setLabelCount(6, false);
+        xAxis.setLabelCount(10, false);
         //设置X轴的值（最小值、最大值、然后会根据设置的刻度数量自动分配刻度显示）
         xAxis.setAxisMinimum(0f);
 //        xAxis.setXOffset(-3);

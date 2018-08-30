@@ -320,19 +320,40 @@
 
     <include layout="@layout/device_item_bg_1dp" />
 
-    <Button
-        android:id="@+id/btn_overweight"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="@dimen/layout_margin10dp"
-        android:layout_marginRight="@dimen/layout_margin10dp"
-        android:layout_marginTop="10dp"
-        android:background="?attr/custom_sure_button_bg"
-        android:elevation="@dimen/layout_margin30dp"
-        android:text="检验是否超重"
-        android:textColor="?attr/custom_sure_button_text"
-        android:textSize="18sp" />
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_overweight"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/layout_margin5dp"
+            android:layout_marginLeft="@dimen/layout_margin10dp"
+            android:layout_marginRight="@dimen/layout_margin10dp"
+            android:layout_weight="1"
+            android:background="?attr/custom_sure_button_bg"
+            android:elevation="@dimen/layout_margin30dp"
+            android:text="检验是否超重"
+            android:textColor="?attr/custom_sure_button_text"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/layout_margin5dp"
+            android:layout_marginLeft="@dimen/layout_margin10dp"
+            android:layout_marginRight="@dimen/layout_margin10dp"
+            android:layout_weight="1"
+            android:background="?attr/custom_sure_button_bg"
+            android:elevation="@dimen/layout_margin30dp"
+            android:text="最近记录"
+            android:textColor="?attr/custom_sure_button_text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
     <!-- <include layout="@layout/device_item_bg_1dp"/>
 
 
@@ -398,8 +419,8 @@
             android:layout_width="75dp"
             android:layout_height="30dp"
             android:layout_marginRight="@dimen/layout_margin80dp"
-            android:enabled="false"
             android:background="@drawable/toggle_selector_day"
+            android:enabled="false"
             android:paddingBottom="@dimen/layout_margin10dp"
             android:paddingTop="@dimen/layout_margin10dp"
             android:textOff="@null"
