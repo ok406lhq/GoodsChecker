@@ -136,6 +136,8 @@ public class ScanFragment extends Fragment {
                     ToastUtils.singleToast("容积不能为0");
                 } else if (Double.valueOf(et1) == 0) {
                     ToastUtils.singleToast("自重不能为0");
+                } else if (mText_table_1.getText().toString().length() == 0) {
+                    ToastUtils.singleToast("请输入车牌号码");
                 } else {
                     supportGoods = DataSupport.where("name = ?", mText_table_5.getText().toString()).find(SupportGoods.class);
                     Intent intent = new Intent(getActivity(), CheckActivity.class);
@@ -250,6 +252,11 @@ public class ScanFragment extends Fragment {
                 bundle.putDouble("deviation", 1.0);
                 bundle.putBoolean("isShowRecord", true);
 
+                if (mText_table_1.getText().toString().length() == 0) {
+                    ToastUtils.singleToast("请输入车牌号码");
+                    return;
+                }
+
                 RequestWeight.getInstance().getWeightTime(new Subscriber<HttpResultWeight>() {
                     @Override
                     public void onCompleted() {
@@ -357,8 +364,6 @@ public class ScanFragment extends Fragment {
         } else {
             mToggleIsLimit.setChecked(true);
         }
-
-
     }
 
 
