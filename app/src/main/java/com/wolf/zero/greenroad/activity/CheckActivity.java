@@ -52,6 +52,7 @@ public class CheckActivity extends AppCompatActivity {
 
     private LineChart lineChart;
     private ArrayList<String> chartList;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
