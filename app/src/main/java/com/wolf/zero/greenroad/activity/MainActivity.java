@@ -118,12 +118,9 @@ public class MainActivity extends BaseActivity implements
 
     private static final int REQ_0 = 001;
 
-
     private AppCompatActivity mActivity;
 
-
     private AlertDialog.Builder mDialog;
-
 
     private AlertDialog.Builder mNotPostDialog;
 
