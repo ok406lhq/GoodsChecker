@@ -648,7 +648,7 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
         // 进入相册 以下是例子：不需要的api可以不写
         PictureSelector.create(DetailsFragment.this)
                 .openGallery(PictureMimeType.ofImage())
-                .theme(R.style.picture_QQ_style)
+                .theme(R.style.picture_default_style)
                 .maxSelectNum(maxNum)
                 .minSelectNum(minNum)
                 .imageSpanCount(3)// 每行显示个数
@@ -1866,7 +1866,6 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
         Log.e("timeintimet", "timeint: " + time.toString());
         long timeint = 0;
         try {
-            ;
             timeint = Long.valueOf(time).longValue();
 
         } catch (Exception e) {

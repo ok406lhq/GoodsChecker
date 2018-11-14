@@ -83,8 +83,6 @@ public class ShowNotificationActivity extends BaseActivity {
         mTextNotifyCheck.setText(supportChecked.getSiteChecks().get(0));
         mTextNotifyCarType.setText(supportDetail.getDetail_carType());
         mTextNotifyHuowu.setText(supportDetail.getGoods());
-
-
     }
 
     private void initToolbar() {
