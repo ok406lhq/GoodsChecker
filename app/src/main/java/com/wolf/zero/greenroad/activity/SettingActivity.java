@@ -154,9 +154,10 @@ public class SettingActivity extends BaseActivity {
         } else {
             mShiftList.clear();
         }
-        mShiftList.add("早班");
-        mShiftList.add("中班");
-        mShiftList.add("晚班");
+        mShiftList.add("一班");
+        mShiftList.add("二班");
+        mShiftList.add("三班");
+        mShiftList.add("四班");
 
 //        mTextSettingShift.setText(SPUtils.get(mActivity, SPUtils.TEXTLANE, "X08") + "");
         mBtnSettingShift.setOnClickListener(view -> {
