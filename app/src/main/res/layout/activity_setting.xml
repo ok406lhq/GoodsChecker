@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,37 +15,60 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_setting"
             style="@style/style_toolbar"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-        </android.support.v7.widget.Toolbar>
+            app:popupTheme="@style/AppTheme.PopupOverlay"></android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
-        android:background="?attr/custom_attr_app_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?attr/custom_attr_app_bg"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:padding="@dimen/layout_margin10dp">
 
             <include
                 android:id="@+id/text_layout_road_setting"
-                layout="@layout/setting_text_item_layout_road"/>
+                layout="@layout/setting_text_item_layout_road" />
 
             <include
                 android:id="@+id/text_layout_station_setting"
-                layout="@layout/setting_text_item_layout_station"/>
+                layout="@layout/setting_text_item_layout_station" />
 
             <include
                 android:id="@+id/text_layout_lane_setting"
-                layout="@layout/setting_text_item_layout_lane"/>
+                layout="@layout/setting_text_item_layout_lane" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/layout_margin10dp"
+                android:background="?attr/custom_sure_button_bg"
+                android:id="@+id/rl_custom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_margin50dp">
+
+                <TextView
+                    android:textColor="?attr/custom_sure_button_text"
+                    android:id="@+id/tv_custom_lane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="点此可自定义班次" />
+
+                <ImageButton
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_custom_lane"
+                    android:background="@drawable/pop_custom_lane" />
+            </RelativeLayout>
 
             <include
                 android:id="@+id/text_layout_operator_setting"
-                layout="@layout/setting_text_item_layout_operator"/>
+                layout="@layout/setting_text_item_layout_operator" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,50 +81,50 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/layout_margin5dp"
                 android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/layout_margin5dp"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
-                android:textColor="?attr/custom_text_color_second"
                 android:text="工号"
-                android:textSize="@dimen/text16"/>
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="@dimen/text16" />
 
             <TextView
-                android:textColor="?attr/custom_text_color_second"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:text="姓名"
-                android:textSize="@dimen/text16"/>
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="@dimen/text16" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:textColor="?attr/custom_text_color_second"
                 android:layout_gravity="left"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:text="检查人"
-                android:textSize="@dimen/text16"/>
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="@dimen/text16" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_marginLeft="@dimen/layout_margin10dp"
-                android:textColor="?attr/custom_text_color_second"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:text="登记人"
-                android:textSize="@dimen/text16"/>
+                android:textColor="?attr/custom_text_color_second"
+                android:textSize="@dimen/text16" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@null"/>
+                android:text="@null" />
 
 
         </LinearLayout>
@@ -110,7 +132,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/setting_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

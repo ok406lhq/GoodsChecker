@@ -42,7 +42,7 @@
             android:id="@+id/text_setting_shift"
             android:textColor="?attr/custom_attr_setting_text_color"
             android:textSize="@dimen/text18"
-            android:text="早班"
+            android:text="一班"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

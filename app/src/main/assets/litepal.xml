@@ -5,7 +5,7 @@
 
 
     <!--<version value="8" />-->
-    <version value="3" />
+    <version value="5" />
 
     <list>
         <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLoginInfo" />
@@ -21,6 +21,7 @@
         <mapping class="com.wolf.zero.greenroad.litepalbean.SupportGoods" />
         <mapping class="com.wolf.zero.greenroad.litepalbean.SupportCarTypeAndConfig" />
         <mapping class="com.wolf.zero.greenroad.litepalbean.SupportLocalGoods" />
+        <mapping class="com.wolf.zero.greenroad.litepalbean.SupportBanci" />
 
     </list>
     <!--<mapping class="com.android.htc.greenroad.litepalbean.SupportLane" />-->

@@ -8,8 +8,8 @@ android {
         applicationId "com.wolf.zero.greenroad"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 11
-        versionName "3.0.8"
+        versionCode 12
+        versionName "3.0.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
@@ -63,6 +63,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    compile 'com.jetlee:FlowTagLayout:1.0.1'
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'

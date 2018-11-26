@@ -30,7 +30,6 @@
     <string name="menu_bar_title_cancer">取消</string>
     <string name="yellow_car">黄牌</string>
     <string name="blue_car">蓝牌</string>
-    <string name="about_app">关于</string>
     <string name="update_app">更新</string>
     <string name="cancel_count">清除</string>
     <string name="activity_about_version">版本号:</string>
@@ -43,6 +42,7 @@
     <string name="key_used">激活码已使用</string>
     <string name="Invalid_Key">激活码无效</string>
     <string name="back_up_app">退出</string>
+    <string name="about_app">关于</string>
     <string name="Retry">请重试</string>
     <string name="network_error">网络无连接</string>
     <string name="Wrong_format_key">激活码格式不正确</string>

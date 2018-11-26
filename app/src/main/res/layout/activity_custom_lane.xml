@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/custom_attr_app_bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_custom_lane"
+            style="@style/style_toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.jet.flowtaglayout.FlowTagLayout
+        android:id="@+id/flowTagLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin20dp"
+        app:item_background="?attr/custom_sure_button_bg"
+        app:item_bottomMargin="8dp"
+        app:item_bottomPadding="6dp"
+        app:item_leftMargin="15dp"
+        app:item_leftPadding="12dp"
+        app:item_rightMargin="15dp"
+        app:item_rightPadding="12dp"
+        app:item_textColor="?attr/custom_sure_button_text"
+        app:item_textSize="16sp"
+        app:item_topMargin="8dp"
+        app:item_topPadding="6dp" />
+
+    <EditText
+        android:id="@+id/et_custom_lane"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/layout_margin10dp"
+        android:layout_marginRight="@dimen/layout_margin10dp"
+        android:layout_marginTop="@dimen/layout_margin20dp"
+        android:background="?attr/text_box_bg"
+        android:gravity="top|left"
+        android:padding="@dimen/layout_margin10dp" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="@dimen/layout_margin10dp"
+        android:layout_marginRight="@dimen/layout_margin10dp"
+        android:layout_marginTop="@dimen/layout_margin20dp"
+        android:background="?attr/custom_sure_button_bg"
+        android:elevation="@dimen/layout_margin30dp"
+        android:text="添加自定义班次"
+        android:textColor="?attr/custom_sure_button_text"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="@dimen/layout_margin10dp"
+        android:layout_marginRight="@dimen/layout_margin10dp"
+        android:layout_marginTop="@dimen/layout_margin20dp"
+        android:background="?attr/custom_sure_button_bg"
+        android:elevation="@dimen/layout_margin30dp"
+        android:text="保存"
+        android:textColor="?attr/custom_sure_button_text"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

@@ -39,6 +39,7 @@ import com.wolf.zero.greenroad.httpresultbean.HttpResultCode;
 import com.wolf.zero.greenroad.httpresultbean.HttpResultGoods;
 import com.wolf.zero.greenroad.https.RequestGoods;
 import com.wolf.zero.greenroad.https.RequestSignal;
+import com.wolf.zero.greenroad.litepalbean.SupportBanci;
 import com.wolf.zero.greenroad.litepalbean.SupportCarTypeAndConfig;
 import com.wolf.zero.greenroad.litepalbean.SupportDraftOrSubmit;
 import com.wolf.zero.greenroad.litepalbean.SupportGoods;
@@ -193,6 +194,7 @@ public class MainActivity extends BaseActivity implements
         mTvOperatorCheckMain.setOnClickListener(v -> openSettingActivity());
         mTvOperatorLoginMain.setOnClickListener(v -> openSettingActivity());
 
+        initBanci();
         initSpace();
 
         initData();
@@ -300,6 +302,7 @@ public class MainActivity extends BaseActivity implements
     private void initData() {
         // TODO: 2018/2/4 拿到登录的班次的信息
         initGoodData(mUsername);
+
         initConfigView();
 
 
@@ -378,6 +381,18 @@ public class MainActivity extends BaseActivity implements
 //        }
 
 
+    }
+
+    private void initBanci() {
+        ArrayList<String> bancis = new ArrayList<>();
+        bancis.add("一班");
+        bancis.add("二班");
+        bancis.add("三班");
+        bancis.add("四班");
+        SupportBanci banci = new SupportBanci();
+        banci.setBancis(bancis);
+        //保存数据一定要save！
+        banci.save();
     }
 
     private void initConfigView() {

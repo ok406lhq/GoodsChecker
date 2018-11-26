@@ -10,6 +10,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.orhanobut.logger.Logger;
@@ -17,6 +18,7 @@ import com.wolf.zero.greenroad.R;
 import com.wolf.zero.greenroad.SpinnerPopupWindow;
 import com.wolf.zero.greenroad.adapter.SettingOperatorAdapter;
 import com.wolf.zero.greenroad.adapter.SpinnerAdapter;
+import com.wolf.zero.greenroad.litepalbean.SupportBanci;
 import com.wolf.zero.greenroad.litepalbean.SupportOperator;
 import com.wolf.zero.greenroad.litepalbean.TeamItem;
 import com.wolf.zero.greenroad.manager.GlobalManager;
@@ -50,6 +52,8 @@ public class SettingActivity extends BaseActivity {
     TextView mTextSettingShift;
     @BindView(R.id.btn_setting_shift)
     ImageButton mBtnSettingShift;
+    @BindView(R.id.rl_custom)
+    RelativeLayout mRlCustom;
 
     private SettingActivity mActivity;
     private SettingOperatorAdapter mAdapter;
@@ -154,16 +158,18 @@ public class SettingActivity extends BaseActivity {
         } else {
             mShiftList.clear();
         }
-        mShiftList.add("一班");
-        mShiftList.add("二班");
-        mShiftList.add("三班");
-        mShiftList.add("四班");
+        List<SupportBanci> BanciList = DataSupport.findAll(SupportBanci.class);
+        SupportBanci banci = BanciList.get(0);
+        ArrayList<String> dataList = banci.getBancis();
+        for (int i = 0; i < dataList.size(); i++) {
+            mShiftList.add(dataList.get(i));
+        }
 
-//        mTextSettingShift.setText(SPUtils.get(mActivity, SPUtils.TEXTLANE, "X08") + "");
         mBtnSettingShift.setOnClickListener(view -> {
             mWidth = mTextSettingShift.getWidth();
             mAdapterLane = new SpinnerAdapter(this, mShiftList, position -> {
                 mTextSettingShift.setText(mShiftList.get(position));
+
                 mPopupWindow.dismissPopWindow();
                 SPUtils.putAndApply(mActivity, SPUtils.CURRENT_SHIFT, mShiftList.get(position));
 //                TeamItem teamItem = new TeamItem();
@@ -176,13 +182,20 @@ public class SettingActivity extends BaseActivity {
                     .setmAdapter(mAdapterLane)
 //                    .setmItemDecoration(new RecycleViewDivider(getContext(), LinearLayoutManager.HORIZONTAL, 5, Color.GRAY))
                     .setmHeight(200 * (mShiftList.size()))
-                    .setmWidth((int) (mWidth * 0.8))
+                    .setmWidth((int) (mWidth))
                     .setOutsideTouchable(true)
                     .setFocusable(true)
                     .build();
 
 //            mPopupWindow.showPopWindow(view, (int) mDimension);
             mPopupWindow.showPopWindowCenter(view);
+        });
+
+        mRlCustom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingActivity.this, CustomLaneActivity.class));
+            }
         });
     }
 
