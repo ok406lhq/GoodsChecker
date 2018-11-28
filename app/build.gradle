@@ -8,8 +8,8 @@ android {
         applicationId "com.wolf.zero.greenroad"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 12
-        versionName "3.0.9"
+        versionCode 13
+        versionName "3.11.15"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     compileOptions {

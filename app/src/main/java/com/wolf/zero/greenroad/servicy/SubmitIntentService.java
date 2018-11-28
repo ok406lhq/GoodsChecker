@@ -244,7 +244,7 @@ public class SubmitIntentService extends IntentService {
             Logger.i(mCheckedBean_Q.toString());
         });
 
-        ScanFragment.setScanConnectListener(bean -> {
+        ScanFragment.setScanConectListener(bean -> {
             mScanInfoBean_Q = bean;
             Logger.i(mScanInfoBean_Q.toString());
         });

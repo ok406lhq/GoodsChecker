@@ -94,7 +94,9 @@
 
     <LinearLayout style="@style/ll_scan_item_style">
 
-        <LinearLayout style="@style/ll_scan_code_info_style">
+        <LinearLayout
+            style="@style/ll_scan_code_info_style"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,6 +113,28 @@
 
             <TextView
                 android:id="@+id/text_table_5"
+                style="@style/scan_code_change_info_style"
+                android:maxLines="3" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_scan_code_info_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" "
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/scan_code_info_style"
+                android:text="货物种类:" />
+
+
+            <TextView
+                android:id="@+id/text_table_13"
                 style="@style/scan_code_change_info_style"
                 android:maxLines="3" />
 
@@ -421,8 +445,8 @@
             android:layout_marginRight="@dimen/layout_margin80dp"
             android:background="@drawable/toggle_selector_day"
             android:enabled="false"
-            android:paddingBottom="@dimen/layout_margin10dp"
             android:paddingTop="@dimen/layout_margin10dp"
+            android:paddingBottom="@dimen/layout_margin10dp"
             android:textOff="@null"
             android:textOn="@null" />
 

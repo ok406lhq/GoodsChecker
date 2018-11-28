@@ -58,6 +58,7 @@ public class ScanFragment extends Fragment {
     private static TextView mText_table_10;
     private static TextView mText_table_11;
     private static TextView mText_table_12;
+    private static TextView mText_table_13;
 
     private static ScanFragment sFragment;
     private static SupportScan sSupportScan;
@@ -331,6 +332,7 @@ public class ScanFragment extends Fragment {
         mText_table_10 = (TextView) view.findViewById(R.id.text_table_10);
         mText_table_11 = (TextView) view.findViewById(R.id.text_table_11);
         mText_table_12 = (TextView) view.findViewById(R.id.text_table_12);
+        mText_table_13 = (TextView) view.findViewById(R.id.text_table_13);
         mToggleIsLimit = (ToggleButton) view.findViewById(R.id.toggle_is_limit);
 
         List<TeamItem> teamItems = DataSupport.where("username = ? ", SPUtils.get(getActivity(), GlobalManager.USERNAME,
@@ -393,7 +395,7 @@ public class ScanFragment extends Fragment {
     }
 
 
-    public static void setScanConnectListener(ScanBeanConnectListener listener) {
+    public static void setScanConectListener(ScanBeanConnectListener listener) {
 
         String scan_05Q = mText_table_5.getText().toString().trim();
         String scan_10Q = mText_table_10.getText().toString().trim();
@@ -417,10 +419,13 @@ public class ScanFragment extends Fragment {
         }
     }
 
-    public static void notifyGoodsChange(String goods) {
+    public static void notifyGoodsChange(String goods,String goodsType) {
         if (goods != null && mText_table_5 != null) {
             Logger.i(goods);
             mText_table_5.setText(goods);
+        }if (goodsType!=null && mText_table_13 != null){
+            Logger.i(goodsType);
+            mText_table_13.setText(goodsType);
         }
     }
 

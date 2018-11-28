@@ -509,8 +509,8 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
         ScanFragment.notifyNumberChange(carNumber);
     }
 
-    private void notifyGoodsChange(String goods) {
-        ScanFragment.notifyGoodsChange(goods);
+    private void notifyGoodsChange(String goods,String goodsType) {
+        ScanFragment.notifyGoodsChange(goods,goodsType);
     }
 
     private void notifyScanWeightChange(String weight) {
@@ -1046,11 +1046,11 @@ public class DetailsFragment extends Fragment implements TextChangeWatcher.After
 //                    Log.e("ABCDE", sGoodsBuilder.toString().split(";")[0] );
                     String goodsList = goodList.toString().substring(1, goodList.iterator().next().toString().length() + 1);
 
-//                    notifyGoodsChange(goodsType);
-                    notifyGoodsChange(goodsList);
+                    notifyGoodsChange(goodsList,goodsType);
+//                    notifyGoodsChange(goodsList);
                 } else {
                     //只选"其他"的情况下
-                    notifyGoodsChange("其他");
+                    notifyGoodsChange("其他","其他");
                     Logger.i("typeList" + typeList.toString());
                 }
             } else {
