@@ -397,7 +397,7 @@ public class ScanFragment extends Fragment {
 
     public static void setScanConectListener(ScanBeanConnectListener listener) {
 
-        String scan_05Q = mText_table_5.getText().toString().trim();
+        String scan_05Q = mText_table_13.getText().toString().trim();
         String scan_10Q = mText_table_10.getText().toString().trim();
 //        boolean isLimit = mToggleIsLimit.isChecked();
 
@@ -419,11 +419,12 @@ public class ScanFragment extends Fragment {
         }
     }
 
-    public static void notifyGoodsChange(String goods,String goodsType) {
+    public static void notifyGoodsChange(String goods, String goodsType) {
         if (goods != null && mText_table_5 != null) {
             Logger.i(goods);
             mText_table_5.setText(goods);
-        }if (goodsType!=null && mText_table_13 != null){
+        }
+        if (goodsType != null && mText_table_13 != null) {
             Logger.i(goodsType);
             mText_table_13.setText(goodsType);
         }

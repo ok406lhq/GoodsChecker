@@ -90,6 +90,7 @@ public class SubmitIntentService extends IntentService {
     private boolean mBlackTag;
     private String mUsername;
     private ArrayList mMustList;
+    private String currentTime = null;
 
     public SubmitIntentService() {
         super("SubmitService");
@@ -122,7 +123,7 @@ public class SubmitIntentService extends IntentService {
         if (intent != null) {
             mUsername = (String) SPUtils.get(getApplicationContext(), GlobalManager.USERNAME, "qqqq");
             SupportDraftOrSubmit submit = DataSupport.where("username = ?", mUsername).findFirst(SupportDraftOrSubmit.class);
-            if (submit != null){
+            if (submit != null) {
                 submit.setIsPass(0);
                 submit.save();
             }
@@ -144,7 +145,6 @@ public class SubmitIntentService extends IntentService {
             final String action = intent.getAction();
 
 
-
             if (ACTION_SUBMIT.equals(action)) {
 
                 String enterType = intent.getStringExtra(ARG_TYPE_SUBMIT);
@@ -156,30 +156,36 @@ public class SubmitIntentService extends IntentService {
                 }
                 mFilePath_str = mFile.getPath();
 
-
-                mSubmitTime = TimeUtil.getCurrentTimeToDate();
-               int liteId  = TimeUtil.getTimeId();
+                if (GlobalManager.TYPE_DRAFT_ENTER_SHOW.equals(enterType)) {
+                    currentTime = DataSupport.where("username=?and lite_ID =?", mUsername, mLite_id + "").findFirst(SupportDraftOrSubmit.class).getCurrent_time();
+                }
+                if (currentTime != null) {
+                    mSubmitTime = currentTime;
+                } else {
+                    mSubmitTime = TimeUtil.getCurrentTimeToDate();
+                }
+                int liteId = TimeUtil.getTimeId();
 
                 getListenerData(enterType);
                 String currentShift;
 
                 if (GlobalManager.TYPE_DRAFT_ENTER_SHOW.equals(enterType)) {
-                     currentShift = DataSupport.where("username = ? and lite_ID = ? ", mUsername, mLite_id + "").findFirst(SupportDraftOrSubmit.class).getCurrentShift();
+                    currentShift = DataSupport.where("username = ? and lite_ID = ? ", mUsername, mLite_id + "").findFirst(SupportDraftOrSubmit.class).getCurrentShift();
                 } else {
                     currentShift = (String) SPUtils.get(this, SPUtils.CURRENT_SHIFT, "");
                 }
                 if (NetWorkManager.isnetworkConnected(sActivity)) {
                     if (GlobalManager.TYPE_DRAFT_ENTER_SHOW.equals(enterType)) {
-                        postPictureAndJson(mSubmitTime, mLite_id,currentShift);
+                        postPictureAndJson(mSubmitTime, mLite_id, currentShift);
                     } else {
-                        postPictureAndJson(mSubmitTime, liteId,currentShift);
+                        postPictureAndJson(mSubmitTime, liteId, currentShift);
                     }
                 } else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(sActivity);
                     builder.setTitle("网络无连接");
                     builder.setMessage("是否保存为草稿");
                     builder.setPositiveButton("保存草稿", (dialog, which) -> {
-                        save2Litepal(mSubmitTime, liteId, GlobalManager.TYPE_DRAFT_LITE, ACTION_SUBMIT, mShowType_submit,currentShift);
+                        save2Litepal(mSubmitTime, liteId, GlobalManager.TYPE_DRAFT_LITE, ACTION_SUBMIT, mShowType_submit, currentShift);
                     });
                     builder.setNegativeButton("取消", (dialog, which) -> {
                         dialog.dismiss();
@@ -606,21 +612,21 @@ public class SubmitIntentService extends IntentService {
 //            }));
 //        }
 
-        if (mMustList.contains("称重质量")&&(info.getScan_04Q() == null || "".equals(info.getScan_04Q()))) {
+        if (mMustList.contains("称重质量") && (info.getScan_04Q() == null || "".equals(info.getScan_04Q()))) {
             ToastUtils.singleToast("请确定称重质量");
             return;
         }
-        if (mMustList.contains("免费金额")&&(info.getScan_06Q() == null || "".equals(info.getScan_06Q()))) {
+        if (mMustList.contains("免费金额") && (info.getScan_06Q() == null || "".equals(info.getScan_06Q()))) {
             ToastUtils.singleToast("请确定免费金额");
             return;
         }
 
-        if (mMustList.contains("出口车道")&&(info.getScan_12Q() == null || "".equals(info.getScan_12Q()))) {
+        if (mMustList.contains("出口车道") && (info.getScan_12Q() == null || "".equals(info.getScan_12Q()))) {
 
             ToastUtils.singleToast("请确定出口车道");
             return;
         }
-        if (mMustList.contains("车型")&&(info.getCarType() == null || "".equals(info.getCarType()))) {
+        if (mMustList.contains("车型") && (info.getCarType() == null || "".equals(info.getCarType()))) {
             ToastUtils.singleToast("请确定车型");
             return;
         }
